@@ -47,22 +47,90 @@
 
 $active_group = 'default';
 $active_record = TRUE;
+////wwwcont_banners
+$db['banners']['hostname'] = 'localhost';
+$db['banners']['username'] = 'root';
+$db['banners']['password'] = '';
+$db['banners']['database'] = 'wwwcont_banners';
+$db['banners']['dbdriver'] = 'mysql';
+$db['banners']['dbprefix'] = '';
+$db['banners']['pconnect'] = TRUE;
+$db['banners']['db_debug'] = TRUE;
+$db['banners']['cache_on'] = FALSE;
+$db['banners']['cachedir'] = '';
+$db['banners']['char_set'] = 'utf8';
+$db['banners']['dbcollat'] = 'utf8_general_ci';
+$db['banners']['swap_pre'] = '';
+$db['banners']['autoinit'] = TRUE;
+$db['banners']['stricton'] = FALSE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+////wwwcont_columnas
+$db['columnas']['hostname'] = 'localhost';
+$db['columnas']['username'] = 'root';
+$db['columnas']['password'] = '';
+$db['columnas']['database'] = 'wwwcont_columnas';
+$db['columnas']['dbdriver'] = 'mysql';
+$db['columnas']['dbprefix'] = '';
+$db['columnas']['pconnect'] = TRUE;
+$db['columnas']['db_debug'] = TRUE;
+$db['columnas']['cache_on'] = FALSE;
+$db['columnas']['cachedir'] = '';
+$db['columnas']['char_set'] = 'utf8';
+$db['columnas']['dbcollat'] = 'utf8_general_ci';
+$db['columnas']['swap_pre'] = '';
+$db['columnas']['autoinit'] = TRUE;
+$db['columnas']['stricton'] = FALSE;
+
+////wwwcont_imagen
+$db['imagen']['hostname'] = 'localhost';
+$db['imagen']['username'] = 'root';
+$db['imagen']['password'] = '';
+$db['imagen']['database'] = 'wwwcont_imagen';
+$db['imagen']['dbdriver'] = 'mysql';
+$db['imagen']['dbprefix'] = '';
+$db['imagen']['pconnect'] = TRUE;
+$db['imagen']['db_debug'] = TRUE;
+$db['imagen']['cache_on'] = FALSE;
+$db['imagen']['cachedir'] = '';
+$db['imagen']['char_set'] = 'utf8';
+$db['imagen']['dbcollat'] = 'utf8_general_ci';
+$db['imagen']['swap_pre'] = '';
+$db['imagen']['autoinit'] = TRUE;
+$db['imagen']['stricton'] = FALSE;
+
+////wwwcont_noticias
+$db['noticias']['hostname'] = 'localhost';
+$db['noticias']['username'] = 'root';
+$db['noticias']['password'] = '';
+$db['noticias']['database'] = 'wwwcont_noticias';
+$db['noticias']['dbdriver'] = 'mysql';
+$db['noticias']['dbprefix'] = '';
+$db['noticias']['pconnect'] = TRUE;
+$db['noticias']['db_debug'] = TRUE;
+$db['noticias']['cache_on'] = FALSE;
+$db['noticias']['cachedir'] = '';
+$db['noticias']['char_set'] = 'utf8';
+$db['noticias']['dbcollat'] = 'utf8_general_ci';
+$db['noticias']['swap_pre'] = '';
+$db['noticias']['autoinit'] = TRUE;
+$db['noticias']['stricton'] = FALSE;
+
+////wwwcont_videos
+$db['videos']['hostname'] = 'localhost';
+$db['videos']['username'] = 'root';
+$db['videos']['password'] = '';
+$db['videos']['database'] = 'wwwcont_videos';
+$db['videos']['dbdriver'] = 'mysql';
+$db['videos']['dbprefix'] = '';
+$db['videos']['pconnect'] = TRUE;
+$db['videos']['db_debug'] = TRUE;
+$db['videos']['cache_on'] = FALSE;
+$db['videos']['cachedir'] = '';
+$db['videos']['char_set'] = 'utf8';
+$db['videos']['dbcollat'] = 'utf8_general_ci';
+$db['videos']['swap_pre'] = '';
+$db['videos']['autoinit'] = TRUE;
+$db['videos']['stricton'] = FALSE;
 
 
 /* End of file database.php */
