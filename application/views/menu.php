@@ -1,4 +1,5 @@
 <div id="menu">
+
   <ul>
       <li style="width: 39px; margin-right: 440px;"><a href="#">Puebla</a></li>
       <!-- <li><a href="#">Tlaxcala </a></li> -->
@@ -10,4 +11,5 @@
       <li style="border:0; padding-right:0px; padding-left:150px;"><input name="" type="text" /></li>
       <li style="border:0; padding-left:0px; padding-right:0px;"><img src="ima/layout/go.png" width="24" height="23" alt="go" /></li>
   </ul>
+
 </div> <!--/menu -->
