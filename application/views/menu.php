@@ -1,10 +1,10 @@
 <div id="menu">
   <ul>
-      <li><a href="#">Puebla</a></li>
-      <li><a href="#">Tlaxcala </a></li>
-      <li><a href="#">Oaxaca</a></li>
-      <li><a href="#">Veracrúz</a></li>
-      <li><a href="#">Estado de México</a></li>
+      <li style="width: 39px; margin-right: 440px;"><a href="#">Puebla</a></li>
+      <!-- <li><a href="#">Tlaxcala </a></li> -->
+      <!-- <li><a href="#">Oaxaca</a></li> -->
+      <!-- <li><a href="#">Veracrúz</a></li> -->
+      <!-- <li><a href="#">Estado de México</a></li> -->
       <li style="margin-top:-38px; border:0;"><a href="#"><img src="ima/layout/tw.png" width="34" height="61" alt="twitter" /></a></li>
       <li style="margin-top:-10px; border:0;"><a href="#"><img src="ima/layout/fb.png" width="33" height="34" alt="twitter" /></a></li>
       <li style="border:0; padding-right:0px; padding-left:150px;"><input name="" type="text" /></li>
