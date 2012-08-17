@@ -45,7 +45,7 @@
 | the active record class
 */
 
-$active_group = 'default';
+$active_group = 'columnas';
 $active_record = TRUE;
 ////wwwcont_banners
 $db['banners']['hostname'] = 'localhost';
