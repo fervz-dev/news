@@ -29,21 +29,51 @@
 </div> <!--/columnhome -->
 
 <div class="columnhome" style="margin-right:0px; width:296px;">
+  <!-- Espectaculos -->
 <h2><a class="negro16" href="#">ESPECTACULOS</a></h2>
 <div class="content border">
-<span class="anterior"><a href="#"><img src="ima/layout/anteriorchico.png" width="6" height="9" alt="anterior" /></a></span>
-<span class="siguiente"><a href="#"><img src="ima/layout/siguientechico.png" width="6" height="9" alt="anterior" /></a></span>
-<span class="nav">
-<a href="#"><img src="ima/layout/nav1.png" width="9" height="9" /></a>
-<a href="#"><img src="ima/layout/nav1.png" alt="" width="9" height="9" /></a>
-<a href="#"><img src="ima/layout/nav1.png" alt="" width="9" height="9" /></a>
-<a href="#"><img src="ima/layout/nav2.png" alt="" width="9" height="9" /></a>
-<a href="#"><img src="ima/layout/nav1.png" alt="" width="9" height="9" /></a>
-</span>
-  <div class="imacrop" style=" width:296px; height:142px;"> <a href="#"><img src="ima/espectaculos/home.jpg" alt="" width="296" height="142" /></a>
+<div id="container">
+<div id="slides">
+        <div class="slides_container">
+          <div class="slide">
+            <a href="http://www.flickr.com/photos/jliba/4665625073/" title="145.365 - Happy Bokeh Thursday! | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-1.jpg"  alt="Slide 1"></a>
+            <div class="caption" style="bottom:0">
+              <p>Happy Bokeh Thursday!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <a href="http://www.flickr.com/photos/stephangeyer/3020487807/" title="Taxi | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-2.jpg"  alt="Slide 2"></a>
+            <div class="caption">
+              <p>Taxi</p>
+            </div>
+          </div>
+          <div class="slide">
+            <a href="http://www.flickr.com/photos/childofwar/2984345060/" title="Happy Bokeh raining Day | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-3.jpg"  alt="Slide 3"></a>
+            <div class="caption">
+              <p>Happy Bokeh raining Day</p>
+            </div>
+          </div>
+          <div class="slide">
+            <a href="http://www.flickr.com/photos/b-tal/117037943/" title="We Eat Light | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-4.jpg"  alt="Slide 4"></a>
+            <div class="caption">
+              <p>We Eat Light</p>
+            </div>
+          </div>
+          <div class="slide">
+            <a href="http://www.flickr.com/photos/bu7amd/3447416780/" title="&ldquo;I must go down to the sea again, to the lonely sea and the sky; and all I ask is a tall ship and a star to steer her by.&rdquo; | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-5.jpg" width="570" height="270" alt="Slide 5"></a>
+            <div class="caption">
+              <p>&ldquo;I must go down to the sea again, to the lonely sea and the sky...&rdquo;</p>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="prev"><img src="ima/layout/anteriorchico.png"  alt="Arrow Prev"></a>
+        <a href="#" class="next"><img src="ima/layout/siguientechico.png"  alt="Arrow Next"></a>
+      </div>
+      <!-- <img src="ima/slide-galeria/example-frame.png" width="739" height="341" alt="Example Frame" id="frame"> -->
+    </div>
   </div>
-  <p class="sumariogaleria"><span class="blanco12" style="padding:5px 30px;">Emite <strong class="blanco12">PFP</strong> recomendaciones para la temporada vacacional de verano</span></p>
-</div>
+
+<!-- /Espectaculos -->
 <h2><a class="negro16" href="#">COLUMNISTAS</a></h2>
 <div class="content border" style="padding:10px;">
 <ul class="columnistas-tab">
