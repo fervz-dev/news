@@ -4,6 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento sin título</title>
 <link href="<?php echo base_url();?>css/estilos.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
 </head>
 
 <body>
@@ -17,7 +22,10 @@
       <li><a href="#">Contáctenos </a></li>
       <li> <a href="#">Inicio</a></li>
       <li class="azul12" style="border:0px; border-left:1px solid #008fc5"> 30°C</li>
-      <li class="azul12">Julio 20, 2011, 10:58 am</li>
+      <li class="azul12"><?php 
+      setlocale(LC_ALL,"es_ES");
+                            echo strftime(" %d  %B , %Y");?>
+          </li>
   </ul>
 </div><!--/menutop -->
 </div><!--/header -->

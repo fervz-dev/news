@@ -6,8 +6,8 @@ Tel (222) 00 00 00, (222) 00 00 00</p>
 queda
 expresamente prohibida la publicación, retransmisión, edición y cualquier uso de los contenidos de este portal.</p>
 <div class="redesfooter"><strong><span class="blanco12" style="margin:10px 30px 0 0;">Síguenos en</span></strong><span>
-<span><a href="#"><img src="ima/layout/tw-fo.png" alt="Twitter" width="42" height="42" /></a></span>
-<span><a href="#"><img src="ima/layout/fb-fo.png" alt="Facebook" width="42" height="42" /></a></span>
+<span><a href="http://twitter.com/fabiangomezh"><img src="ima/layout/tw-fo.png" alt="Twitter" width="42" height="42" /></a></span>
+<span><a href="http://www.facebook.com/contraparteinf.periodismo"><img src="ima/layout/fb-fo.png" alt="Facebook" width="42" height="42" /></a></span>
 <span><a href="#"><img src="ima/layout/yt-fo.png" alt="Youtube" width="42" height="42" /></a></span>
 </span>
 </div>

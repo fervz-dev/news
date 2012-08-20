@@ -118,8 +118,8 @@
 
 <span class="clear" style="margin:20px 0"></span>
 
-<div class="columnhome">
-  <img src="ima/layout/facebook.png" width="326" height="545" />
+<div class="columnhome" width="326" height="545">
+  <?php echo $this->load->view('twitter');?>
 </div><!--/columnhome -->
 
 <div class="columnhome">
@@ -150,8 +150,8 @@
 
 </div> <!--/columnhome -->
 
-<div class="columnhome" style="width:296px; margin:0px;">
-	<img src="ima/layout/facebook2.png" width="296" height="435" />
+<div class="columnhome" style="width:296px; margin:0px;" width="296" height="435"">
+	<?php $this->load->view('facebook');?>
     <p><img src="ima/banners/chicos/banner2.jpg" width="296" height="95" /></p>
 
 </div>
