@@ -3,10 +3,10 @@
 new TWTR.Widget({
   version: 2,
   type: 'profile',
-  rpp: 4,
+  rpp: 15,
   interval: 30000,
-  width: 250,
-  height: 300,
+  width: 325,
+  height: 450,
   theme: {
     shell: {
       background: '#00c8ff',
