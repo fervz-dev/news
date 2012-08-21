@@ -5,7 +5,10 @@
 <title>Documento sin título</title>
 <link href="<?php echo base_url();?>css/estilos.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo base_url();?>css/global.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="<?php echo base_url();?>css/custom-theme/jquery-ui-1.8.23.custom.css">
+<script src="<?php echo base_url();?>js/jquery-1.8.0.min.js"></script>
+<script src="<?php echo base_url();?>js/jquery-ui-1.8.23.custom.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> -->
 <script src="<?php echo base_url();?>js/slides.min.jquery.js"></script>
 <script>
 		$(function(){
