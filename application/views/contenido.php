@@ -75,20 +75,28 @@
 
 <!-- /Espectaculos -->
 <h2><a class="negro16" href="#">COLUMNISTAS</a></h2>
-<div class="content border" style="padding:10px;">
-<ul class="columnistas-tab">
-    <li><a class="active" href="#">Fabián Gómez</a></li>
-    <li><a href="#">Carlos Macías</a></li>
+<div id="tabs" >
+    <ul >
+    <li><a href="#tabs-1">Fabián Gómez</a></li>
+    <li><a href="#tabs-2">Carlos Macías</a></li>
 </ul>
 <span class="clear" style="border-top:1px solid #cdcaca; }
 "></span>
-  <ul class="item-columna">
+  <div id="tabs-1" class="item-columna">
     <li><a href="#"><strong>Emite PFP recomendaciones para la temporada vacacional de verano</strong></a></li>
     <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
     <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
     <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
     <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
-  </ul>
+  </div>
+    
+      <div id="tabs-2" class="item-columna">
+    <li><a href="#"><strong>Emite </strong></a></li>
+    <li><a href="#">Emite PFP </a></li>
+    <li><a href="#">Emite PFP recomendaciones </a></li>
+    <li><a href="#">Emite PFP recomendaciones para </a></li>
+    <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
+  </div>
 
   </div> <!--/content -->
 </div> <!--/columnhome -->

@@ -80,7 +80,7 @@ body { background:url(../ima/layout/halo.png) left top no-repeat;  padding-top:2
 
 .columnistas-tab { clear:both; margin:0px; display:inline-block; border-bottom:1px solid #cdcaca; overflow:hidden; }
 .columnistas-tab li { float:left; list-style-type:none; }
-.columnistas-tab li a { font-weight:bold; font-size:16px; padding:4px 4px; background:url(../ima/layout/bg-tab.png) left top repeat-x #f0eeee; border:1px solid #cdcaca; display:block; border-width:1px 1px 0 1px; }
+.columnistas-tab li a { font-weight:bold; font-size:10px; padding:4px 4px; background:url(../ima/layout/bg-tab.png) left top repeat-x #f0eeee; border:1px solid #cdcaca; display:block; border-width:1px 1px 0 1px; }
 .columnistas-tab li:last-child a { border-left:0px; }
 .columnistas-tab li a.active { background-image:none; background-color:#008fc5; color:#fff; }
 
