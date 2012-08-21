@@ -104,8 +104,8 @@ blockquote,q { quotes:"" ""; }
 	position:absolute;
 	top:145px;
 	left:4px;
-	width:24px;
-	height:43px;
+	width:6px;
+	height:9px;
 	display:block;
 	z-index:101;
 }
@@ -164,14 +164,14 @@ blockquote,q { quotes:"" ""; }
 	padding:5px 20px 0 20px;
 	background:#000;
 	background:rgba(0,0,0,.5);
-	width:294px;
+	width:254px;
 	font-size:1.3em;
 	line-height:1.33;
 	color:#fff;
 	border-top:1px solid #000;
 	text-shadow:none;
 }
-.caption p{color: #fff; margin:0px; padding: 0px;}
+.caption p{color: #fff; margin:0px; padding: 0px; width:255px}
 /*
 	Footer
 */
