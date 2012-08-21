@@ -76,12 +76,11 @@
 <!-- /Espectaculos -->
 <h2><a class="negro16" href="#">COLUMNISTAS</a></h2>
 <div id="tabs" >
-    <ul >
+    <ul>
     <li><a href="#tabs-1">Fabián Gómez</a></li>
     <li><a href="#tabs-2">Carlos Macías</a></li>
 </ul>
-<span class="clear" style="border-top:1px solid #cdcaca; }
-"></span>
+
   <div id="tabs-1" class="item-columna">
     <li><a href="#"><strong>Emite PFP recomendaciones para la temporada vacacional de verano</strong></a></li>
     <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
