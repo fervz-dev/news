@@ -6,19 +6,26 @@ class Inicio extends CI_Controller {
 	{
 	   parent::__construct();
 	   //Do your magic here
-           $this->load->model("rubro_model","rubro");
+           
+            $this->load->model("rubro_model","rubro");
+           
 	}
+        
+        
     public function index()
     {
+        
         $data['ciudad']=  $this->rubro->ciudad();
         $data['nacional'] = $this->rubro->nacionales();
         $data['espectaculos'] = $this->rubro->espectaculos();
         
         
-	    
+    
         $this->load->view('principal', $data);
         //$this->load->view('principal');
     }
+    
+   
 
 }
 

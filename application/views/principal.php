@@ -122,30 +122,10 @@ $ciudad4= word_limiter($ciudad4, 12);
   </div>
 
 <!-- /Espectaculos -->
-<h2><a class="negro16" href="#">COLUMNISTAS</a></h2>
-<div id="tabs" >
-    <ul>
-    <li><a href="#tabs-1">Fabián Gómez</a></li>
-    <li><a href="#tabs-2">Carlos Macías</a></li>
-</ul>
 
-  <div id="tabs-1" class="item-columna">
-    <li><a href="#"><strong>Emite PFP recomendaciones para la temporada vacacional de verano</strong></a></li>
-    <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
-    <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
-    <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
-    <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
-  </div>
-    
-      <div id="tabs-2" class="item-columna">
-    <li><a href="#"><strong>Emite </strong></a></li>
-    <li><a href="#">Emite PFP </a></li>
-    <li><a href="#">Emite PFP recomendaciones </a></li>
-    <li><a href="#">Emite PFP recomendaciones para </a></li>
-    <li><a href="#">Emite PFP recomendaciones para la temporada vacacional de verano</a></li>
-  </div>
+<?php echo $this->load->view('columnistas');?>
 
-  </div> <!--/content -->
+
 </div> <!--/columnhome -->
 
 <span class="clear" style="margin:20px 0;"></span>
