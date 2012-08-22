@@ -143,27 +143,9 @@ $ciudad4= word_limiter($ciudad4, 12);
 </div> <!--/columnhome -->
 
 <span class="clear"></span>
-
-<div class="columnhome bgazul youtube" style="width:640px;">
-  <div class="preview">
-  <img src="ima/youtube/previrew.jpg" width="333" height="264" />
-   Become a Member of the Club Today!
-   Join us at www.commonwealthclub.today
-   </div>
-   <div class="item-youtube"> <a href="#"><img src="ima/youtube/fot1.jpg" width="109" height="76" align="left" /></a>
-   	<p><strong class="negro13">Mujer extraviada culpa a su GPS</strong></p>
-	<span class="negro11"> Este jueves, cuando volvió a subir el precio del</span>
-   </div>
-   <div class="item-youtube"> <a href="#"><img src="ima/youtube/fot1.jpg" width="109" height="76" align="left" /></a>
-   	<p><strong class="negro13">Mujer extraviada culpa a su GPS</strong></p>
-	<span class="negro11"> Este jueves, cuando volvió a subir el precio del</span>
-   </div>
-   <div class="item-youtube"> <a href="#"><img src="ima/youtube/fot1.jpg" width="109" height="76" align="left" /></a>
-   	<p><strong class="negro13">Mujer extraviada culpa a su GPS</strong></p>
-	<span class="negro11"> Este jueves, cuando volvió a subir el precio del</span>
-   </div>
-</div> <!--/columnhome -->
-
+<!-----------------------------------------------VIDEOS------------------------------------>
+<?php echo $this->load->view('videos');?>
+<!---------------------------------------TERMINA VIDEOS------------------------------------->
 <div class="columnhome" style="width:296px; margin-right:0px;">
   <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
