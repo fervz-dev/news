@@ -1,5 +1,36 @@
 <?php $this->load->view('header'); ?>
 <?php $this->load->view('menu'); ?>
+<?php $this->load->helper('text');?>
+
+<?php 
+/**************************PALABRAS RECORTADAS DE NACIONALES****************************************************/
+$nacional1 = $nacional[1]['sintesis']; 
+$nacional1= word_limiter($nacional1, 12);
+
+$nacional2 = $nacional[2]['sintesis']; 
+$nacional2= word_limiter($nacional2, 12);
+
+$nacional3 = $nacional[3]['sintesis']; 
+$nacional3= word_limiter($nacional3, 12);
+
+$nacional4 = $nacional[4]['sintesis']; 
+$nacional4= word_limiter($nacional4, 12);
+
+
+/**************************PALABRAS RECORTADAS DE LOCALES(CIUDAD)*************************************************/
+$ciudad1 = $ciudad[1]['sintesis']; 
+$ciudad1= word_limiter($ciudad1, 12);
+
+$ciudad2 = $ciudad[2]['sintesis']; 
+$ciudad2= word_limiter($ciudad2, 12);
+
+$ciudad3 = $ciudad[3]['sintesis']; 
+$ciudad3= word_limiter($nacional3, 12);
+
+$ciudad4 = $ciudad[4]['sintesis']; 
+$ciudad4= word_limiter($ciudad4, 12);
+ ?>
+
 <div id="main">
 
 <div class="columnhome">
@@ -12,11 +43,18 @@
     
     <h3 class="titulosfoto"><span><a class="blanco18" href="#"><?php echo $nacional[0]['titulo'];?></a></span></h3>
 <h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[1]['titulo'];?></a><br />
-<span><?php echo $nacional[0]['description'];?></span></h2>
 
-<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[2]['titulo'];?></a></h2>
-<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[3]['titulo'];?></a></h2>
-<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[4]['titulo'];?></a></h2>
+    
+    <span><?php echo $nacional1;?></span></h2>
+
+<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[2]['titulo'];?></a><br/>
+<span><?php echo $nacional2;?></span></h2>
+    
+<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[3]['titulo'];?></a><br/>
+<span><?php echo $nacional3;?></span></h2>
+    
+<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[4]['titulo'];?></a><br/>
+<span><?php echo $nacional4;?></span></h2>
 </div> <!--/content -->
 </div> <!--/columnhome -->
 
@@ -25,10 +63,16 @@
 <div class="content border">
   <div class="imacrop" style="height:217px;"> <img src="ima/internacionales/foto.jpg" alt="" width="326" height="217" />
   </div>
-  <h3 class="titulosfoto"><span><a  class="blanco18" href="#"><?php echo $ciudad[0]['titulo'];?></a></span></h3><br/>
-  <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[1]['titulo'];?></a></h2>
-  <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[2]['titulo'];?></a></h2>
-  <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[3]['titulo'];?></a></h2>
+  <h3 class="titulosfoto"><span><a  class="blanco18" href="#"><?php echo $ciudad[0]['titulo'];?></a></span></h3><br/><br/>
+  <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[1]['titulo'];?></a><br/>
+  <span><?php echo $ciudad1;?></span></h2>
+  
+  
+  <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[2]['titulo'];?></a><br/>
+  <span><?php echo $ciudad2;?></span></h2>
+  
+  <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[3]['titulo'];?></a><br/>
+  <span><?php echo $ciudad3;?></span></h2>
 </div>
 </div> <!--/columnhome -->
 
