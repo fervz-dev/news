@@ -20,7 +20,7 @@ LIMIT 4");
   <img src="ima/youtube/previrew.jpg" width="333" height="264" />
    <?php echo $key[0]['titulo'];?>
 			
-   Become a Member of the Club Today!
+   
    Join us at www.commonwealthclub.today
    </div>
    <div class="item-youtube"> <a href="#"><img src="ima/youtube/fot1.jpg" width="109" height="76" align="left" /></a>
