@@ -204,8 +204,9 @@ $query= $query->result_array();
     <ul class="item-columna">
     <li><strong class="negro12"><a href="#"><?php echo $query[0]['titulo']; ?> </a></strong><br />
       <strong class="azul12"><?php echo $query[0]['fecha'];?></strong> · <strong><?php echo $query[0]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[0]['etiqueta'];?></a> <span class="azul11">/</span> 
-                    <span class="azul11"><?php $id= $query[0]['idRubro']; 
+     <span class="negro11">Temas relacionados:</span>
+     <a class="azul11" href="#"><?php echo $query[0]['etiqueta'];?></a> <span class="azul11">/</span> 
+                    <a class="azul11"><?php $id= $query[0]['idRubro']; 
                     $bus = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
@@ -219,16 +220,47 @@ $query= $query->result_array();
                     $bus=$bus->result_array();
                     
                     echo $bus[1]['titulo'];
-                    ?></span> 
-                    <span class="azul11">/</span> <span class="azul11"><?php echo $bus[2]['titulo'];?></span></li>
+                    ?></a> 
+                    <span class="azul11">/</span> <a class="azul11"><?php echo $bus[2]['titulo'];?></a></li>
 
     <li><strong class="negro12"><a href="#"><?php echo $query[1]['titulo'];?></a></strong><br />
       <strong class="azul12"><?php echo $query[1]['fecha']; ?></strong> · <strong><?php echo $query[1]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[1]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[1]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+     <span class="negro11">Temas relacionados:</span> 
+            <a class="azul11" href="#"><?php echo $query[1]['etiqueta'];?></a> <span class="azul11">/</span> 
+            <a class="azul11" href="#"><?php $id= $query[1]['idRubro']; 
+                    $bus = $db4->query("SELECT
+               noticias.idNoticia,
+               noticias.titulo,
+               noticias.idTipoDocto
+               FROM
+               noticias
+               WHERE
+               noticias.idTipoDocto =" .$id."
+               ORDER BY
+               noticias.idNoticia DESC");
+                    $bus=$bus->result_array();
+                    
+                    echo $bus[1]['titulo'];
+                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
     
     <li><strong class="negro12"><a href="#"><?php echo $query[2]['titulo']?></a></strong><br />
       <strong class="azul12"><?php echo $query[2]['fecha'];?></strong> · <strong><?php echo $query[2]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[2]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[2]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[2]['etiqueta'];?></a> <span class="azul11">/</span> 
+     <a class="azul11" href="#"><?php $id= $query[2]['idRubro']; 
+                    $bus = $db4->query("SELECT
+               noticias.idNoticia,
+               noticias.titulo,
+               noticias.idTipoDocto
+               FROM
+               noticias
+               WHERE
+               noticias.idTipoDocto =" .$id."
+               ORDER BY
+               noticias.idNoticia DESC");
+                    $bus=$bus->result_array();
+                    
+                    echo $bus[1]['titulo'];
+                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
 
   </ul>
     <p><img src="ima/banners/chicos/banner2.jpg" alt="" width="296" height="88" /></p>
@@ -245,15 +277,61 @@ $query= $query->result_array();
     <ul class="item-columna">
     <li><strong class="negro12"><a href="#"><?php echo $query[3]['titulo'];?></a></strong><br />
       <strong class="azul12"><?php echo $query[3]['fecha'];?></strong> · <strong><?php echo $query[3]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[3]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[3]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[3]['etiqueta'];?></a> <span class="azul11">/</span> 
+     <a class="azul11" href="#"><?php $id= $query[3]['idRubro']; 
+                    $bus = $db4->query("SELECT
+               noticias.idNoticia,
+               noticias.titulo,
+               noticias.idTipoDocto
+               FROM
+               noticias
+               WHERE
+               noticias.idTipoDocto =" .$id."
+               ORDER BY
+               noticias.idNoticia DESC");
+                    $bus=$bus->result_array();
+                    
+                    echo $bus[1]['titulo'];
+                    ?></a> 
+     <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
     
     <li><strong class="negro12"><a href="#"><?php echo $query[4]['titulo']?></a></strong><br />
       <strong class="azul12"><?php echo $query[4]['fecha']?></strong> · <strong><?php echo $query[4]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[4]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[4]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[4]['etiqueta'];?></a> <span class="azul11">/</span>
+     <a class="azul11" href="#"><?php $id= $query[4]['idRubro']; 
+                    $bus = $db4->query("SELECT
+               noticias.idNoticia,
+               noticias.titulo,
+               noticias.idTipoDocto
+               FROM
+               noticias
+               WHERE
+               noticias.idTipoDocto =" .$id."
+               ORDER BY
+               noticias.idNoticia DESC");
+                    $bus=$bus->result_array();
+                    
+                    echo $bus[1]['titulo'];
+                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
     
     <li><strong class="negro12"><a href="#"><?php echo $query[5]['titulo'];?></a></strong><br />
       <strong class="azul12"><?php echo $query[5]['fecha'];?></strong> · <strong><?php echo $query[5]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[5]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[5]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[5]['etiqueta'];?></a> <span class="azul11">/</span> 
+     <a class="azul11" href="#"><?php $id= $query[5]['idRubro']; 
+                    $bus = $db4->query("SELECT
+               noticias.idNoticia,
+               noticias.titulo,
+               noticias.idTipoDocto
+               FROM
+               noticias
+               WHERE
+               noticias.idTipoDocto =" .$id."
+               ORDER BY
+               noticias.idNoticia DESC");
+                    $bus=$bus->result_array();
+                    
+                    echo $bus[1]['titulo'];
+                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
   </ul>
 
     <p><img src="ima/banners/chicos/banner2.jpg" width="329" height="95" /></p>
@@ -261,11 +339,41 @@ $query= $query->result_array();
     <ul class="item-columna">
     <li><strong class="negro12"><a href="#"><? echo $query[6]['titulo'];?></a></strong><br />
       <strong class="azul12"><? echo $query[6]['fecha'];?></strong> · <strong><?php echo $query[6]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[6]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[6]['etiqueta'];?></span> <span class="azul11">/</span> 								<span class="azul11">Mercados y Estadísticas</span></li>
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[6]['etiqueta'];?></a> <span class="azul11">/</span>
+     <a class="azul11" href="#"><?php $id= $query[6]['idRubro']; 
+                    $bus = $db4->query("SELECT
+               noticias.idNoticia,
+               noticias.titulo,
+               noticias.idTipoDocto
+               FROM
+               noticias
+               WHERE
+               noticias.idTipoDocto =" .$id."
+               ORDER BY
+               noticias.idNoticia DESC");
+                    $bus=$bus->result_array();
+                    
+                    echo $bus[1]['titulo'];
+                    ?></a> <span class="azul11">  /  </span>  <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
 
     <li><strong class="negro12"><a href="#"><?echo $query[7]['titulo'];?></a></strong><br />
       <strong class="azul12"><?echo $query[7]['fecha'];?></strong> · <strong><?php echo $query[7]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[7]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[7]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[7]['etiqueta'];?></a> <span class="azul11">/</span> 
+     <a class="azul11" href="#"><?php $id= $query[7]['idRubro']; 
+                    $bus = $db4->query("SELECT
+               noticias.idNoticia,
+               noticias.titulo,
+               noticias.idTipoDocto
+               FROM
+               noticias
+               WHERE
+               noticias.idTipoDocto =" .$id."
+               ORDER BY
+               noticias.idNoticia DESC");
+                    $bus=$bus->result_array();
+                    
+                    echo $bus[1]['titulo'];
+                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
   </ul>
 
 </div> <!--/columnhome -->
