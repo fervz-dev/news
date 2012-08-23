@@ -152,37 +152,83 @@ $ciudad4= word_limiter($ciudad4, 12);
 $db4=$this->load->database("noticias",true);
 $query = $db4->query("
     SELECT
-noticias.*,
-rubros.*
+noticias.idNoticia,
+noticias.fecha,
+noticias.hora,
+noticias.titulo,
+noticias.idImagen,
+noticias.idTipoDocto,
+noticias.contenido,
+noticias.sintesis,
+noticias.idPrioridadInterna,
+noticias.alineacion,
+noticias.titular,
+noticias.id_usuario,
+noticias.id_tipoUsuario,
+noticias.keywords,
+noticias.description,
+
+opinionnoticia.id_mensaje,
+opinionnoticia.id_noticia, COUNT(opinionnoticia.id_noticia),
+opinionnoticia.activo,
+opinionnoticia.comentarios,
+
+rubros.idRubro,
+rubros.etiqueta
 FROM
-noticias ,
-rubros
+noticias
+LEFT JOIN opinionnoticia ON noticias.idNoticia = opinionnoticia.id_noticia
+JOIN rubros ON noticias.idTipoDocto = rubros.idRubro
 WHERE
 rubros.etiqueta NOT LIKE 'Ciudad' AND
 noticias.idTipoDocto = rubros.idRubro AND
 rubros.etiqueta NOT LIKE 'Nacional' AND
 rubros.etiqueta NOT LIKE 'Espectáculos' AND
-rubros.activo = 1
+rubros.activo = 1 
+
+GROUP BY
+noticias.idNoticia DESC
 ORDER BY
 noticias.idNoticia DESC
 LIMIT 8");
+
+
 $query= $query->result_array();
+
+
+
 
         ?>
     <div class="columnhome" style="width:296px; margin-right:0px;">
   <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
-    <li><strong class="negro12"><a href="#"><?php echo $query[0]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[0]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
-    
+    <li><strong class="negro12"><a href="#"><?php echo $query[0]['titulo']; ?> </a></strong><br />
+      <strong class="azul12"><?php echo $query[0]['fecha'];?></strong> · <strong><?php echo $query[0]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[0]['etiqueta'];?></a> <span class="azul11">/</span> 
+                    <span class="azul11"><?php $id= $query[0]['idRubro']; 
+                    $bus = $db4->query("SELECT
+               noticias.idNoticia,
+               noticias.titulo,
+               noticias.idTipoDocto
+               FROM
+               noticias
+               WHERE
+               noticias.idTipoDocto =" .$id."
+               ORDER BY
+               noticias.idNoticia DESC");
+                    $bus=$bus->result_array();
+                    
+                    echo $bus[1]['titulo'];
+                    ?></span> 
+                    <span class="azul11">/</span> <span class="azul11"><?php echo $bus[2]['titulo'];?></span></li>
+
     <li><strong class="negro12"><a href="#"><?php echo $query[1]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[1]['fecha']; ?></strong> · <strong>2  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+      <strong class="azul12"><?php echo $query[1]['fecha']; ?></strong> · <strong><?php echo $query[1]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[1]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[1]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
     
     <li><strong class="negro12"><a href="#"><?php echo $query[2]['titulo']?></a></strong><br />
-      <strong class="azul12"><?php echo $query[2]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+      <strong class="azul12"><?php echo $query[2]['fecha'];?></strong> · <strong><?php echo $query[2]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[2]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[2]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
 
   </ul>
     <p><img src="ima/banners/chicos/banner2.jpg" alt="" width="296" height="88" /></p>
@@ -198,28 +244,28 @@ $query= $query->result_array();
   <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
     <li><strong class="negro12"><a href="#"><?php echo $query[3]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[3]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+      <strong class="azul12"><?php echo $query[3]['fecha'];?></strong> · <strong><?php echo $query[3]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[3]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[3]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
     
     <li><strong class="negro12"><a href="#"><?php echo $query[4]['titulo']?></a></strong><br />
-      <strong class="azul12"><?php echo $query[4]['fecha']?></strong> · <strong>2  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+      <strong class="azul12"><?php echo $query[4]['fecha']?></strong> · <strong><?php echo $query[4]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[4]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[4]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
     
     <li><strong class="negro12"><a href="#"><?php echo $query[5]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[5]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+      <strong class="azul12"><?php echo $query[5]['fecha'];?></strong> · <strong><?php echo $query[5]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[5]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[5]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
   </ul>
 
     <p><img src="ima/banners/chicos/banner2.jpg" width="329" height="95" /></p>
 <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
     <li><strong class="negro12"><a href="#"><? echo $query[6]['titulo'];?></a></strong><br />
-      <strong class="azul12"><? echo $query[6]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> 								<span class="azul11">Mercados y Estadísticas</span></li>
+      <strong class="azul12"><? echo $query[6]['fecha'];?></strong> · <strong><?php echo $query[6]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[6]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[6]['etiqueta'];?></span> <span class="azul11">/</span> 								<span class="azul11">Mercados y Estadísticas</span></li>
 
     <li><strong class="negro12"><a href="#"><?echo $query[7]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?echo $query[7]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
+      <strong class="azul12"><?echo $query[7]['fecha'];?></strong> · <strong><?php echo $query[7]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[7]['etiqueta'];?></a> <span class="azul11">/</span> <span class="azul11"><?php echo $query[7]['etiqueta'];?></span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
   </ul>
 
 </div> <!--/columnhome -->
