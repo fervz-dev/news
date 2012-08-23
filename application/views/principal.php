@@ -146,17 +146,42 @@ $ciudad4= word_limiter($ciudad4, 12);
 <!-----------------------------------------------VIDEOS------------------------------------>
 <?php echo $this->load->view('videos');?>
 <!---------------------------------------TERMINA VIDEOS------------------------------------->
-<div class="columnhome" style="width:296px; margin-right:0px;">
+
+<?php 
+
+$db4=$this->load->database("noticias",true);
+$query = $db4->query("
+    SELECT
+noticias.*,
+rubros.*
+FROM
+noticias ,
+rubros
+WHERE
+rubros.etiqueta NOT LIKE 'Ciudad' AND
+noticias.idTipoDocto = rubros.idRubro AND
+rubros.etiqueta NOT LIKE 'Nacional' AND
+rubros.etiqueta NOT LIKE 'Espectáculos' AND
+rubros.activo = 1
+ORDER BY
+noticias.idNoticia DESC
+LIMIT 8");
+$query= $query->result_array();
+
+        ?>
+    <div class="columnhome" style="width:296px; margin-right:0px;">
   <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
-    <li><strong class="negro12"><a href="#">Economía de EU crece 1.3% en segundo trimestre</a></strong><br />
-      <strong class="azul12">12 /05 / 1978</strong> · <strong>2  Comentarios</strong><br />
+    <li><strong class="negro12"><a href="#"><?php echo $query[0]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?php echo $query[0]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
-    <li><strong class="negro12"><a href="#">Economía de EU crece 1.3% en segundo trimestre</a></strong><br />
-      <strong class="azul12">12 /05 / 1978</strong> · <strong>2  Comentarios</strong><br />
+    
+    <li><strong class="negro12"><a href="#"><?php echo $query[1]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?php echo $query[1]['fecha']; ?></strong> · <strong>2  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
-    <li><strong class="negro12"><a href="#">Economía de EU crece 1.3% en segundo trimestre</a></strong><br />
-      <strong class="azul12">12 /05 / 1978</strong> · <strong>2  Comentarios</strong><br />
+    
+    <li><strong class="negro12"><a href="#"><?php echo $query[2]['titulo']?></a></strong><br />
+      <strong class="azul12"><?php echo $query[2]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
 
   </ul>
@@ -172,26 +197,28 @@ $ciudad4= word_limiter($ciudad4, 12);
 <div class="columnhome">
   <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
-    <li><strong class="negro12"><a href="#">Economía de EU crece 1.3% en segundo trimestre</a></strong><br />
-      <strong class="azul12">12 /05 / 1978</strong> · <strong>2  Comentarios</strong><br />
+    <li><strong class="negro12"><a href="#"><?php echo $query[3]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?php echo $query[3]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
-    <li><strong class="negro12"><a href="#">Economía de EU crece 1.3% en segundo trimestre</a></strong><br />
-      <strong class="azul12">12 /05 / 1978</strong> · <strong>2  Comentarios</strong><br />
+    
+    <li><strong class="negro12"><a href="#"><?php echo $query[4]['titulo']?></a></strong><br />
+      <strong class="azul12"><?php echo $query[4]['fecha']?></strong> · <strong>2  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
-    <li><strong class="negro12"><a href="#">Economía de EU crece 1.3% en segundo trimestre</a></strong><br />
-      <strong class="azul12">12 /05 / 1978</strong> · <strong>2  Comentarios</strong><br />
+    
+    <li><strong class="negro12"><a href="#"><?php echo $query[5]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?php echo $query[5]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
   </ul>
 
     <p><img src="ima/banners/chicos/banner2.jpg" width="329" height="95" /></p>
 <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
-    <li><strong class="negro12"><a href="#">Economía de EU crece 1.3% en segundo trimestre</a></strong><br />
-      <strong class="azul12">12 /05 / 1978</strong> · <strong>2  Comentarios</strong><br />
+    <li><strong class="negro12"><a href="#"><? echo $query[6]['titulo'];?></a></strong><br />
+      <strong class="azul12"><? echo $query[6]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> 								<span class="azul11">Mercados y Estadísticas</span></li>
 
-    <li><strong class="negro12"><a href="#">Economía de EU crece 1.3% en segundo trimestre</a></strong><br />
-      <strong class="azul12">12 /05 / 1978</strong> · <strong>2  Comentarios</strong><br />
+    <li><strong class="negro12"><a href="#"><?echo $query[7]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?echo $query[7]['fecha'];?></strong> · <strong>2  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <span class="azul11">Economía de EU</span> <span class="azul11">/</span> <span class="azul11">PIB de EU</span> <span class="azul11">/</span> <span class="azul11">Mercados y Estadísticas</span></li>
   </ul>
 
