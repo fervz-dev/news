@@ -16,19 +16,19 @@ $query= $query->result_array();
   <div class="preview">
    
 
-  <?php echo $query[0]['descripcion'];?>
+  <?php echo $query[0]['descripcion_mediana'];?>
 <?php echo $query[0]['titulo'] ;?>
    
    </div>
-   <div class="item-youtube"> <a href="#"><?php echo $query[0]['descripcion_peque'];?></a>
+   <div class="item-youtube"> <a href="#"><?php echo $query[1]['descripcion_peque'];?></a>
    	<p><strong class="negro13"><?php echo $query[1]['titulo'] ;?></strong></p>
 	<span class="negro11"> </span>
    </div>
-   <div class="item-youtube"> <a href="#"><img src="ima/youtube/fot1.jpg" width="109" height="76" align="left" /></a>
+   <div class="item-youtube"> <a href="#"><?php echo $query[2]['descripcion_peque'];?></a>
    	<p><strong class="negro13"><?php echo $query[2]['titulo'] ;?></strong></p>
 	<span class="negro11"> </span>
    </div>
-   <div class="item-youtube"> <a href="#"><img src="ima/youtube/fot1.jpg" width="109" height="76" align="left" /></a>
+   <div class="item-youtube"> <a href="#"><?php echo $query[3]['descripcion_peque'];?></a>
    	<p><strong class="negro13"><?php echo $query[3]['titulo'] ;?></strong></p>
 	<span class="negro11"> </span>
         
