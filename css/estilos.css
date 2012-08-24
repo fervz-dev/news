@@ -92,13 +92,12 @@ body { background:url(../ima/layout/halo.png) left top no-repeat;  padding-top:2
 .titulo { background:url(../ima/layout/bgtitle.png) left top no-repeat; text-transform:uppercase; margin-top:0px; }
 .titulo span { background:url(../ima/layout/bgtitle-end.png) right top no-repeat; display:block; padding:9px; }
 
-
 .item-youtube { width:300px; float:right; margin-bottom:15px; border-bottom:1px dashed #80b9d4; padding-bottom:15px; }
 
 .item-youtube:last-child { border-bottom:0px solid #fff; }
 
 
-.item-youtube p { margin:0px; }
+.item-youtube p { margin: 0px; }
 
 .item-youtube img { margin-right:10px; }
 
