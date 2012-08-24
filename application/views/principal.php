@@ -41,7 +41,7 @@ $ciudad4= word_limiter($ciudad4, 12);
 </div>
  
     
-    <h3 class="titulosfoto"><span><a class="blanco18" href="#"><?php echo $nacional[0]['titulo'];?></a></span></h3>
+    <h3 class="titulosfoto" ><span><a class="blanco18"  href="#"><?php echo $nacional[0]['titulo'];?></a></span></h3>
 <h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[1]['titulo'];?></a><br />
 
     
@@ -63,7 +63,7 @@ $ciudad4= word_limiter($ciudad4, 12);
 <div class="content border">
   <div class="imacrop" style="height:217px;"> <img src="ima/internacionales/foto.jpg" alt="" width="326" height="217" />
   </div>
-  <h3 class="titulosfoto"><span><a  class="blanco18" href="#"><?php echo $ciudad[0]['titulo'];?></a></span></h3><br/><br/>
+  <h3 class="titulosfoto"><span><a  class="blanco18" href="#"><?php echo $ciudad[0]['titulo'];?></a></span></h3><br/>
   <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[1]['titulo'];?></a><br/>
   <span><?php echo $ciudad1;?></span></h2>
   
