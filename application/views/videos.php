@@ -12,23 +12,45 @@ $query= $query->result_array();
               ?>
 
 
-<div class="columnhome bgazul youtube" style="width:640px;">
+<div class="columnhome bgazul youtube" style="width:640px;" >
   <div class="preview">
  <?php echo $query[0]['descripcion_mediana'];?>
 <?php echo $query[0]['titulo'] ;?>
    </div>
-   <div class="item-youtube"><?php echo $query[1]['descripcion_peque'];?>
-   	<p><strong class="negro13"><a href="#"><?php echo $query[1]['titulo'] ;?></a></strong></p>
-	<span class="negro11"> <?php echo $query[1]['descripcion_video'];?></span>
-   </div>
+<table>
+<tr>
+<td><?php echo $query[1]['descripcion_peque'];?></td>
+<td><strong class="negro13"><a href="#" ><?php echo $query[1]['titulo'] ;?></a></strong><br/><?php echo $query[1]['descripcion_video'];?>
+</td>
+</tr>
+</table>
     
-   <div class="item-youtube"><img src="ima/youtube/fot1.jpg" width="109" height="76" align="left" />
-   	<p><strong class="negro13"> <a href="#"><?php echo $query[2]['titulo'] ;?></a></strong></p>
-	<span class="negro11"> <?php echo $query[2]['descripcion_video']?></span>
-   </div>
     
-   <div class="item-youtube"> <img src="ima/youtube/fot1.jpg" width="109" height="76" align="left" />
-   	<p><strong class="negro13"><a href="#"><?php echo $query[3]['titulo'] ;?></a></strong></p>
-	<span class="negro11"> <?php echo $query[3]['descripcion_video'];?></span>
+   <div class="item-youtube">
+   	<p></p>
+	<span class="negro11"></span>
    </div>
+<table>
+<tr>
+<td><?php echo $query[2]['descripcion_peque'];?></td>
+<td><strong class="negro13"><a href="#" ><?php echo $query[2]['titulo'] ;?></a></strong><br/><?php echo $query[2]['descripcion_video'];?>
+</td>
+</tr>
+</table>
+  <div class="item-youtube">
+   	<p></p>
+	<span class="negro11"></span>
+   </div>  
+<table>
+<tr>
+<td><?php echo $query[3]['descripcion_peque'];?></td>
+<td><strong class="negro13"><a href="#" ><?php echo $query[3]['titulo'] ;?></a></strong><br/><?php echo $query[3]['descripcion_video'];?>
+</td>
+</tr>
+</table>
+   <div class="item-youtube">
+   	<p></p>
+	<span class="negro11"></span>
+   </div>   
+  
 </div> <!--/columnhome -->
