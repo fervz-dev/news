@@ -59,7 +59,8 @@
   <ul>
       <li><a href="#">Contáctenos </a></li>
       <li> <a href="#">Inicio</a></li>
-      <li class="azul12" style="border:0px; border-left:1px solid #008fc5"> 30°C</li>
+      <li class="azul12" style="border:0px; border-left:1px solid #008fc5">30°C</li>
+   
       <li class="azul12"><?php
       setlocale(LC_ALL,"es_ES");
                             echo strftime(" %d  %B , %Y");?>

@@ -12,7 +12,7 @@ $db2=$this->load->database("columnas",true);
     <li><a href="#tabs-2">Carlos Macías</a></li>
 </ul>
 
-  <div id="tabs-1" class="item-columna">
+  <div id="tabs-1" class="item-columna" >
       <?php $query_=$db2->query('SELECT *
 FROM
 columnas ,
@@ -30,7 +30,7 @@ LIMIT 5');?>
 
   </div>
     
-      <div id="tabs-2" class="item-columna">
+      <div id="tabs-2" class="item-columna" >
       <?php $query_=$db2->query('SELECT *
 FROM
 columnas ,

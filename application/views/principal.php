@@ -1,4 +1,3 @@
-
 <?php $this->load->view('header'); ?>
 <?php $this->load->view('menu'); ?>
 <?php $this->load->helper('text');?>
@@ -37,7 +36,7 @@ $ciudad4= word_limiter($ciudad4, 12);
 <div class="columnhome">
 <h2><a class="negro16" href="#">NACIONALES</a></h2>
 <div class="content border">
-<div class="imacrop">
+<div class="coin-title">
 <img src="ima/locales/home.png" width="326" height="183" />
 </div>
  
@@ -64,8 +63,9 @@ $ciudad4= word_limiter($ciudad4, 12);
 <div class="content border">
   <div class="imacrop" style="height:217px;"> <img src="ima/internacionales/foto.jpg" alt="" width="326" height="217" />
   </div>
-  <h3 class="titulosfoto"><span><a  class="blanco18" href="#"><?php echo $ciudad[0]['titulo'];?></a></span></h3><br/>
-  <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[1]['titulo'];?></a><br/>
+    <h3 class="titulosfoto"><span><a  class="blanco18" href="#"><?php echo $ciudad[0]['titulo'];?></a></span></h3><br/>
+  
+    <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[1]['titulo'];?></a><br/>
   <span><?php echo $ciudad1;?></span></h2>
   
   
@@ -85,31 +85,31 @@ $ciudad4= word_limiter($ciudad4, 12);
 <div id="slides">
         <div class="slides_container">
           <div class="slide">
-            <a href="http://www.flickr.com/photos/jliba/4665625073/" title="145.365 - Happy Bokeh Thursday! | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-1.jpg"  alt="Slide 1"></a>
+              <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[0]['idImagen'];?>"  width="570" height="270" alt="Slide 1"></a>
             <div class="caption" style="bottom:0">
               <p><?php echo $espectaculos[0]['titulo'];?></p>
             </div>
           </div>
           <div class="slide">
-            <a href="http://www.flickr.com/photos/stephangeyer/3020487807/" title="Taxi | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-2.jpg"  alt="Slide 2"></a>
+              <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[1]['idImagen'];?>"  width="300" height="240" alt="Slide 2"></a>
             <div class="caption">
               <p><?php echo $espectaculos[1]['titulo'];?></p>
             </div>
           </div>
           <div class="slide">
-            <a href="http://www.flickr.com/photos/childofwar/2984345060/" title="Happy Bokeh raining Day | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-3.jpg"  alt="Slide 3"></a>
+            <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[2]['idImagen'];?>"  width="300" height="240" alt="Slide 3"></a>
             <div class="caption">
               <p><?php echo $espectaculos[2]['titulo'];?></p>
             </div>
           </div>
           <div class="slide">
-            <a href="http://www.flickr.com/photos/b-tal/117037943/" title="We Eat Light | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-4.jpg"  alt="Slide 4"></a>
-            <div class="caption">
-              <p><?php echo $espectaculos[3]['titulo'];?></p>
+            <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[3]['idImagen'];?>" width="300" height="240" alt="Slide 3"></a>
+              <div class="caption">
+                <p><?php echo $espectaculos[3]['titulo'];?></p>
             </div>
           </div>
           <div class="slide">
-            <a href="http://www.flickr.com/photos/bu7amd/3447416780/" title="&ldquo;I must go down to the sea again, to the lonely sea and the sky; and all I ask is a tall ship and a star to steer her by.&rdquo; | Flickr - Photo Sharing!" target="_blank"><img src="ima/slide-galeria/slide-5.jpg" width="570" height="270" alt="Slide 5"></a>
+            <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[4]['idImagen'];?>" width="300" height="240" alt="Slide 5"></a>
             <div class="caption">
               <p><?php echo $espectaculos[4]['titulo'];?></p>
             </div>
