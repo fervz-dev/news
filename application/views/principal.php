@@ -122,6 +122,7 @@ $ciudad4= word_limiter($ciudad4, 12);
     </div>
   </div>
 
+
 <!-- /Espectaculos -->
 
 <?php echo $this->load->view('columnistas');?>
