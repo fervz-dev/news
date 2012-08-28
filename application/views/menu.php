@@ -1,7 +1,7 @@
 <div id="menu">
 
   <ul>
-      <li style="width: 39px; margin-right: 440px;"><a href="#">Puebla</a></li>
+      <li style="width: 39px; margin-right: 430px;"><a href="#">Puebla</a></li>
       <!-- <li><a href="#">Tlaxcala </a></li> -->
       <!-- <li><a href="#">Oaxaca</a></li> -->
       <!-- <li><a href="#">Veracrúz</a></li> -->

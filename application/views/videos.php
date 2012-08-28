@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 $db3=$this->load->database("videos",true);
 
 $query = $db3->query("SELECT *
 FROM
-videosyt
+videosYT
 where fecha<='".date("Y-m-d")."'
 ORDER BY prioridad DESC, fecha desc, hora DESC, id desc
 LIMIT 4");
@@ -24,8 +24,8 @@ $query= $query->result_array();
 </td>
 </tr>
 </table>
-    
-    
+
+
    <div class="item-youtube">
    	<p></p>
 	<span class="negro11"></span>
@@ -40,7 +40,7 @@ $query= $query->result_array();
   <div class="item-youtube">
    	<p></p>
 	<span class="negro11"></span>
-   </div>  
+   </div>
 <table>
 <tr>
 <td><?php echo $query[3]['descripcion_peque'];?></td>
@@ -51,6 +51,6 @@ $query= $query->result_array();
    <div class="item-youtube">
    	<p></p>
 	<span class="negro11"></span>
-   </div>   
-  
+   </div>
+
 </div> <!--/columnhome -->

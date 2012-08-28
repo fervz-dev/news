@@ -2,32 +2,32 @@
 <?php $this->load->view('menu'); ?>
 <?php $this->load->helper('text');?>
 
-<?php 
+<?php
 /**************************PALABRAS RECORTADAS DE NACIONALES****************************************************/
-$nacional1 = $nacional[1]['sintesis']; 
+$nacional1 = $nacional[1]['sintesis'];
 $nacional1= word_limiter($nacional1, 12);
 
-$nacional2 = $nacional[2]['sintesis']; 
+$nacional2 = $nacional[2]['sintesis'];
 $nacional2= word_limiter($nacional2, 12);
 
-$nacional3 = $nacional[3]['sintesis']; 
+$nacional3 = $nacional[3]['sintesis'];
 $nacional3= word_limiter($nacional3, 12);
 
-$nacional4 = $nacional[4]['sintesis']; 
+$nacional4 = $nacional[4]['sintesis'];
 $nacional4= word_limiter($nacional4, 12);
 
 
 /**************************PALABRAS RECORTADAS DE LOCALES(CIUDAD)*************************************************/
-$ciudad1 = $ciudad[1]['sintesis']; 
+$ciudad1 = $ciudad[1]['sintesis'];
 $ciudad1= word_limiter($ciudad1, 12);
 
-$ciudad2 = $ciudad[2]['sintesis']; 
+$ciudad2 = $ciudad[2]['sintesis'];
 $ciudad2= word_limiter($ciudad2, 12);
 
-$ciudad3 = $ciudad[3]['sintesis']; 
+$ciudad3 = $ciudad[3]['sintesis'];
 $ciudad3= word_limiter($nacional3, 12);
 
-$ciudad4 = $ciudad[4]['sintesis']; 
+$ciudad4 = $ciudad[4]['sintesis'];
 $ciudad4= word_limiter($ciudad4, 12);
  ?>
 
@@ -37,22 +37,22 @@ $ciudad4= word_limiter($ciudad4, 12);
 <h2><a class="negro16" href="#">NACIONALES</a></h2>
 <div class="content border">
 <div class="coin-title">
-<img src="ima/locales/home.png" width="326" height="183" />
+<img src="../archivoFotografico/<?php echo $nacional[0]['idImagen'];?>" width="326" height="183" />
 </div>
- 
-    
+
+
     <h3 class="titulosfoto" ><span><a class="blanco18"  href="#"><?php echo $nacional[0]['titulo'];?></a></span></h3>
 <h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[1]['titulo'];?></a><br />
 
-    
+
     <span><?php echo $nacional1;?></span></h2>
 
 <h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[2]['titulo'];?></a><br/>
 <span><?php echo $nacional2;?></span></h2>
-    
+
 <h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[3]['titulo'];?></a><br/>
 <span><?php echo $nacional3;?></span></h2>
-    
+
 <h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[4]['titulo'];?></a><br/>
 <span><?php echo $nacional4;?></span></h2>
 </div> <!--/content -->
@@ -61,17 +61,17 @@ $ciudad4= word_limiter($ciudad4, 12);
 <div class="columnhome">
 <h2><a class="negro16" href="#">LOCALES</a></h2>
 <div class="content border">
-  <div class="imacrop" style="height:217px;"> <img src="ima/internacionales/foto.jpg" alt="" width="326" height="217" />
+  <div class="imacrop" style="height:217px;"> <img src="../archivoFotografico/<?php echo $ciudad[0]['idImagen'];?>" alt="" width="326" height="217" />
   </div>
     <h3 class="titulosfoto"><span><a  class="blanco18" href="#"><?php echo $ciudad[0]['titulo'];?></a></span></h3><br/>
-  
+
     <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[1]['titulo'];?></a><br/>
   <span><?php echo $ciudad1;?></span></h2>
-  
-  
+
+
   <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[2]['titulo'];?></a><br/>
   <span><?php echo $ciudad2;?></span></h2>
-  
+
   <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[3]['titulo'];?></a><br/>
   <span><?php echo $ciudad3;?></span></h2>
 </div>
@@ -122,6 +122,7 @@ $ciudad4= word_limiter($ciudad4, 12);
     </div>
   </div>
 
+
 <!-- /Espectaculos -->
 
 <?php echo $this->load->view('columnistas');?>
@@ -144,13 +145,12 @@ $ciudad4= word_limiter($ciudad4, 12);
 </div> <!--/columnhome -->
 
 <span class="clear"></span>
-<!-----------------------------------------------VIDEOS------------------------------------>
+
 
 <?php echo $this->load->view('videos');?>
-  
-<!---------------------------------------TERMINA VIDEOS------------------------------------->
 
-<?php 
+
+<?php
 
 $db4=$this->load->database("noticias",true);
 $query = $db4->query("
@@ -171,23 +171,23 @@ noticias.id_tipoUsuario,
 noticias.keywords,
 noticias.description,
 
-opinionnoticia.id_mensaje,
-opinionnoticia.id_noticia, COUNT(opinionnoticia.id_noticia),
-opinionnoticia.activo,
-opinionnoticia.comentarios,
+opinionNoticia.id_mensaje,
+opinionNoticia.id_noticia, COUNT(opinionNoticia.id_noticia),
+opinionNoticia.activo,
+opinionNoticia.comentarios,
 
 rubros.idRubro,
 rubros.etiqueta
 FROM
 noticias
-LEFT JOIN opinionnoticia ON noticias.idNoticia = opinionnoticia.id_noticia
+LEFT JOIN opinionNoticia ON noticias.idNoticia = opinionNoticia.id_noticia
 JOIN rubros ON noticias.idTipoDocto = rubros.idRubro
 WHERE
 rubros.etiqueta NOT LIKE 'Ciudad' AND
 noticias.idTipoDocto = rubros.idRubro AND
 rubros.etiqueta NOT LIKE 'Nacional' AND
 rubros.etiqueta NOT LIKE 'Espectáculos' AND
-rubros.activo = 1 
+rubros.activo = 1
 
 GROUP BY
 noticias.idNoticia DESC
@@ -206,10 +206,10 @@ $query= $query->result_array();
   <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
     <li><strong class="negro12"><a href="#"><?php echo $query[0]['titulo']; ?> </a></strong><br />
-      <strong class="azul12"><?php echo $query[0]['fecha'];?></strong> · <strong><?php echo $query[0]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+      <strong class="azul12"><?php echo $query[0]['fecha'];?></strong> · <strong><?php echo $query[0]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span>
-     <a class="azul11" href="#"><?php echo $query[0]['etiqueta'];?></a> <span class="azul11">/</span> 
-                    <a class="azul11"><?php $id= $query[0]['idRubro']; 
+     <a class="azul11" href="#"><?php echo $query[0]['etiqueta'];?></a> <span class="azul11">/</span>
+                    <a class="azul11"><?php $id= $query[0]['idRubro'];
                     $bus = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
@@ -221,16 +221,16 @@ $query= $query->result_array();
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
-                    
+
                     echo $bus[1]['titulo'];
-                    ?></a> 
+                    ?></a>
                     <span class="azul11">/</span> <a class="azul11"><?php echo $bus[2]['titulo'];?></a></li>
 
     <li><strong class="negro12"><a href="#"><?php echo $query[1]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[1]['fecha']; ?></strong> · <strong><?php echo $query[1]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> 
-            <a class="azul11" href="#"><?php echo $query[1]['etiqueta'];?></a> <span class="azul11">/</span> 
-            <a class="azul11" href="#"><?php $id= $query[1]['idRubro']; 
+      <strong class="azul12"><?php echo $query[1]['fecha']; ?></strong> · <strong><?php echo $query[1]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span>
+            <a class="azul11" href="#"><?php echo $query[1]['etiqueta'];?></a> <span class="azul11">/</span>
+            <a class="azul11" href="#"><?php $id= $query[1]['idRubro'];
                     $bus = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
@@ -242,14 +242,14 @@ $query= $query->result_array();
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
-                    
+
                     echo $bus[1]['titulo'];
                     ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
-    
+
     <li><strong class="negro12"><a href="#"><?php echo $query[2]['titulo']?></a></strong><br />
-      <strong class="azul12"><?php echo $query[2]['fecha'];?></strong> · <strong><?php echo $query[2]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[2]['etiqueta'];?></a> <span class="azul11">/</span> 
-     <a class="azul11" href="#"><?php $id= $query[2]['idRubro']; 
+      <strong class="azul12"><?php echo $query[2]['fecha'];?></strong> · <strong><?php echo $query[2]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[2]['etiqueta'];?></a> <span class="azul11">/</span>
+     <a class="azul11" href="#"><?php $id= $query[2]['idRubro'];
                     $bus = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
@@ -261,7 +261,7 @@ $query= $query->result_array();
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
-                    
+
                     echo $bus[1]['titulo'];
                     ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
 
@@ -279,9 +279,9 @@ $query= $query->result_array();
   <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
     <li><strong class="negro12"><a href="#"><?php echo $query[3]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[3]['fecha'];?></strong> · <strong><?php echo $query[3]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[3]['etiqueta'];?></a> <span class="azul11">/</span> 
-     <a class="azul11" href="#"><?php $id= $query[3]['idRubro']; 
+      <strong class="azul12"><?php echo $query[3]['fecha'];?></strong> · <strong><?php echo $query[3]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[3]['etiqueta'];?></a> <span class="azul11">/</span>
+     <a class="azul11" href="#"><?php $id= $query[3]['idRubro'];
                     $bus = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
@@ -293,15 +293,15 @@ $query= $query->result_array();
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
-                    
+
                     echo $bus[1]['titulo'];
-                    ?></a> 
+                    ?></a>
      <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
-    
+
     <li><strong class="negro12"><a href="#"><?php echo $query[4]['titulo']?></a></strong><br />
-      <strong class="azul12"><?php echo $query[4]['fecha']?></strong> · <strong><?php echo $query[4]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+      <strong class="azul12"><?php echo $query[4]['fecha']?></strong> · <strong><?php echo $query[4]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[4]['etiqueta'];?></a> <span class="azul11">/</span>
-     <a class="azul11" href="#"><?php $id= $query[4]['idRubro']; 
+     <a class="azul11" href="#"><?php $id= $query[4]['idRubro'];
                     $bus = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
@@ -313,14 +313,14 @@ $query= $query->result_array();
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
-                    
+
                     echo $bus[1]['titulo'];
                     ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
-    
+
     <li><strong class="negro12"><a href="#"><?php echo $query[5]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[5]['fecha'];?></strong> · <strong><?php echo $query[5]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[5]['etiqueta'];?></a> <span class="azul11">/</span> 
-     <a class="azul11" href="#"><?php $id= $query[5]['idRubro']; 
+      <strong class="azul12"><?php echo $query[5]['fecha'];?></strong> · <strong><?php echo $query[5]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[5]['etiqueta'];?></a> <span class="azul11">/</span>
+     <a class="azul11" href="#"><?php $id= $query[5]['idRubro'];
                     $bus = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
@@ -332,7 +332,7 @@ $query= $query->result_array();
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
-                    
+
                     echo $bus[1]['titulo'];
                     ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
   </ul>
@@ -341,9 +341,9 @@ $query= $query->result_array();
 <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
     <li><strong class="negro12"><a href="#"><? echo $query[6]['titulo'];?></a></strong><br />
-      <strong class="azul12"><? echo $query[6]['fecha'];?></strong> · <strong><?php echo $query[6]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
+      <strong class="azul12"><? echo $query[6]['fecha'];?></strong> · <strong><?php echo $query[6]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[6]['etiqueta'];?></a> <span class="azul11">/</span>
-     <a class="azul11" href="#"><?php $id= $query[6]['idRubro']; 
+     <a class="azul11" href="#"><?php $id= $query[6]['idRubro'];
                     $bus = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
@@ -355,14 +355,14 @@ $query= $query->result_array();
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
-                    
+
                     echo $bus[1]['titulo'];
                     ?></a> <span class="azul11">  /  </span>  <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
 
     <li><strong class="negro12"><a href="#"><?echo $query[7]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?echo $query[7]['fecha'];?></strong> · <strong><?php echo $query[7]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[7]['etiqueta'];?></a> <span class="azul11">/</span> 
-     <a class="azul11" href="#"><?php $id= $query[7]['idRubro']; 
+      <strong class="azul12"><?echo $query[7]['fecha'];?></strong> · <strong><?php echo $query[7]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[7]['etiqueta'];?></a> <span class="azul11">/</span>
+     <a class="azul11" href="#"><?php $id= $query[7]['idRubro'];
                     $bus = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
@@ -374,19 +374,22 @@ $query= $query->result_array();
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
-                    
+
                     echo $bus[1]['titulo'];
                     ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
   </ul>
 
 </div> <!--/columnhome -->
 
-<div class="columnhome" style="width:296px; margin:0px;" width="296" height="435"">
-	<?php $this->load->view('facebook');?>
+<div class="columnhome" style="width:296px; margin:0px;" width="296" height="435">
+  <?php
+    $this->load->view('facebook');
+  ?>
     <p><img src="ima/banners/chicos/banner2.jpg" width="296" height="95" /></p>
 
 </div>
 <!--/columnhome -->
+
 <span class="clear"></span>
 </div> <!--/main -->
 

@@ -64,7 +64,7 @@ body { background:url(../ima/layout/halo.png) left top no-repeat;  padding-top:2
 .columnhome { float:left; width:326px; margin-right:10px; margin-bottom:10ppx; }
 .border { border:1px solid #cfcfcf;}
 
-.titulosfoto {min-height:100px; position:absolute; width:324px; background:url(../ima/layout/azul90.png); margin-top:-53px; margin-bottom:0px; margin-left:0px; }
+.titulosfoto {min-height:50px; max-height: 150px;  position:absolute; width:324px; background:url(../ima/layout/azul90.png); margin-top:-50px; margin-bottom:0px; margin-left:0px; }
 .titulosfoto.verde{ background:url(../ima/layout/verde90.png);}
 .titulosfoto span { padding:5px; display:block; }
 

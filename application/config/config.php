@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/news/';
+$config['base_url']	= 'http://www.contraparteinformativa.com/nuevo_2012/';
 
 /*
 |--------------------------------------------------------------------------
