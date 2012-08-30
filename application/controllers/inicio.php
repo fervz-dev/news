@@ -25,8 +25,8 @@ class Inicio extends CI_Controller {
         //$this->load->view('principal');
     }
     
-  
-    
+   
+
 }
 
 /* End of file inicio.php */

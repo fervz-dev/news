@@ -12,9 +12,13 @@ class Rubro_model extends CI_Model {
         
         $query = $this->db->query("
             SELECT 
+
             noticias.*, rubros.*
+
+            noticias.*, rubros.*, imagen.id
+
             FROM 
-            noticias , rubros, imagen 
+            noticias , rubros, imagen
             WHERE 
             noticias.idTipoDocto = rubros.idRubro AND rubros.idRubro= 2 AND rubros.activo = 1
             ORDER BY 
