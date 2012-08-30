@@ -133,17 +133,10 @@ $ciudad4= word_limiter($ciudad4, 12);
 
 <span class="clear" style="margin:20px 0;"></span>
 
-<div class="columnhome">
-  <img src="ima/banners/chicos/banner2.jpg" width="329" height="95" />
-</div><!--/columnhome -->
+<!----------------------------------BANNERS CENTRALES---------------------------------------------------------------------------->
+<?php $this->load->view('banner_central');?>
+<!----------------------------------/BANNERS CENTRALES---------------------------------------------------------------------------->
 
-<div class="columnhome">
-  <img src="ima/banners/chicos/banner2.jpg" width="329" height="95" />
-</div><!--/columnhome -->
-
-<div class="columnhome" style="width:296px; margin-right:0px;">
-  <img src="ima/banners/chicos/banner1.png" width="312" height="116" />
-</div> <!--/columnhome -->
 
 <span class="clear"></span>
 <!-----------------------------------------------VIDEOS------------------------------------>
@@ -254,7 +247,11 @@ $query= $query->result_array();
                     ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
 
   </ul>
-    <p><img src="ima/banners/chicos/banner2.jpg" alt="" width="296" height="88" /></p>
+  <!----------------------------------BANNERS DERECHA VIDEOS---------------------------------------------------------------------------->
+
+    <p><?php $this->load->view('derecha_videos');?></p>
+<!----------------------------------BANNERS DERECHA VIDEOS---------------------------------------------------------------------------->
+
 </div><!--/columnhome -->
 
 <span class="clear" style="margin:20px 0"></span>
@@ -270,7 +267,9 @@ $query= $query->result_array();
       <strong class="azul12"><?php echo $query[3]['fecha'];?></strong> · <strong><?php echo $query[3]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[3]['etiqueta'];?></a> <span class="azul11">/</span> 
      <a class="azul11" href="#"><?php $id= $query[3]['idRubro']; 
-                    $bus = $db4->query("SELECT
+                   
+     $db5=$this->load->database("noticias",true);
+     $bus = $db5->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
                noticias.idTipoDocto
@@ -290,7 +289,7 @@ $query= $query->result_array();
       <strong class="azul12"><?php echo $query[4]['fecha']?></strong> · <strong><?php echo $query[4]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[4]['etiqueta'];?></a> <span class="azul11">/</span>
      <a class="azul11" href="#"><?php $id= $query[4]['idRubro']; 
-                    $bus = $db4->query("SELECT
+                    $bus = $db5->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
                noticias.idTipoDocto
@@ -324,17 +323,19 @@ $query= $query->result_array();
                     echo $bus[1]['titulo'];
                     ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
   </ul>
-
-    <p><img src="ima/banners/chicos/banner2.jpg" width="329" height="95" /></p>
+<!------------------------------------------BANNER ABAJO CENTRO----------------------------------------------------------------------->
+    <p><?php $this->load->view('abajo_centro');?></p>
     
+<!------------------------------------------/BANNER ABAJO CENTRO----------------------------------------------------------------------->
     
 <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
      <li><strong class="negro12"><a href="#"><?php echo $query[6]['titulo'];?></a></strong><br />
       <strong class="azul12"><?php echo $query[6]['fecha'];?></strong> · <strong><?php echo $query[6]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[6]['etiqueta'];?></a> <span class="azul11">/</span> 
-     <a class="azul11" href="#"><?php $id= $query[6]['idRubro']; 
-                    $bus = $db4->query("SELECT
+     <a class="azul11" href="#"><?php $id= $query[6]['idRubro'];
+     $db6=$this->load->database("noticias",true);
+                    $bus = $db6->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
                noticias.idTipoDocto
@@ -355,7 +356,7 @@ $query= $query->result_array();
       <strong class="azul12"><?php echo $query[7]['fecha'];?></strong> · <strong><?php echo $query[7]['COUNT(opinionnoticia.id_noticia)'];?>  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[7]['etiqueta'];?></a> <span class="azul11">/</span> 
      <a class="azul11" href="#"><?php $id= $query[7]['idRubro']; 
-                    $bus = $db4->query("SELECT
+                    $bus = $db6->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
                noticias.idTipoDocto
@@ -375,7 +376,12 @@ $query= $query->result_array();
 
 <div class="columnhome" style="width:296px; margin:0px;" width="296" height="435"">
 	<?php $this->load->view('facebook');?>
-    <p><img src="ima/banners/chicos/banner2.jpg" width="296" height="95" /></p>
+    
+ <!-------------------------------------BANNER ABAJO DERECHA------------------------------------------------------>
+   
+ <p><?php $this->load->view('abajo_derecha');?></p>
+
+ <!-------------------------------------/BANNER ABAJO DERECHA------------------------------------------------------>
 
 </div>
 <!--/columnhome -->

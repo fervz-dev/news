@@ -13,14 +13,12 @@ class Rubro_model extends CI_Model {
         $query = $this->db->query("
             SELECT 
 
-            noticias.*, rubros.*
-
             noticias.*, rubros.*, imagen.id
 
             FROM 
             noticias , rubros, imagen
             WHERE 
-            noticias.idTipoDocto = rubros.idRubro AND rubros.idRubro= 2 AND rubros.activo = 1
+            noticias.idTipoDocto = rubros.idRubro AND rubros.idRubro= 2 AND rubros.activo = 1 AND noticias.idImagen = imagen.id
             ORDER BY 
             noticias.idNoticia DESC 
             LIMIT 5");
@@ -32,11 +30,11 @@ class Rubro_model extends CI_Model {
         
         $query = $this->db->query("
             SELECT 
-            noticias.*, rubros.*
+            noticias.*, rubros.*, imagen.id
             FROM 
-            noticias , rubros 
+            noticias , rubros, imagen 
             WHERE 
-            noticias.idTipoDocto = rubros.idRubro AND rubros.idRubro= 7 AND rubros.activo = 1 
+            noticias.idTipoDocto = rubros.idRubro AND rubros.idRubro= 7 AND rubros.activo = 1 AND noticias.idImagen = imagen.id
             ORDER BY 
             noticias.idNoticia DESC 
             LIMIT 5");
