@@ -12,7 +12,7 @@ class Rubro_model extends CI_Model {
 
         $query = $this->db->query("
             SELECT
-            noticias.*, rubros.*, imagen.*
+            noticias.*, rubros.*, imagen.id
             FROM
             noticias , rubros, imagen
             WHERE
@@ -28,7 +28,7 @@ class Rubro_model extends CI_Model {
 
         $query = $this->db->query("
             SELECT
-            noticias.*, rubros.*, imagen.*
+            noticias.*, rubros.*, imagen.id
             FROM
              noticias , rubros, imagen
             WHERE
@@ -44,7 +44,7 @@ class Rubro_model extends CI_Model {
 
         $query = $this->db->query("
             SELECT
-            noticias.*, rubros.*, imagen.*
+            noticias.*, rubros.*, imagen.id
             FROM noticias , rubros, imagen
             WHERE noticias.idTipoDocto = rubros.idRubro AND rubros.idRubro= 11 AND rubros.activo = 1 AND noticias.idImagen = imagen.id
             ORDER BY

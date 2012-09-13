@@ -12,7 +12,7 @@ $db2=$this->load->database("columnas",true);
     <li><a href="#tabs-2">Carlos Macías</a></li>
 </ul>
 
-  <div id="tabs-1" class="item-columna" >
+  <div id="tabs-1" class="item-columna">
       <?php $query_=$db2->query('SELECT *
 FROM
 columnas ,
@@ -24,13 +24,15 @@ ORDER BY
 columnas.id_columna DESC
 LIMIT 5');?>
       
-      <?php foreach($query_->result() as $fabian) { ?>
-			  <li><a href="#"><?php echo $fabian->titulo; ?> </a></li>
+      <?php foreach($query_->result() as $fabian) { 
+          $titulo=str_replace("'","",$fabian->titulo);
+          ?>
+      <li><a href="<?php echo base_url();?>index.php/columnista_controller/columnista/<?php echo $titulo;?>/<?php echo $fabian->id_columna?>"><?php echo $fabian->titulo; ?> </a></li>
               <?php } ?>
 
   </div>
     
-      <div id="tabs-2" class="item-columna" >
+      <div id="tabs-2" class="item-columna">
       <?php $query_=$db2->query('SELECT *
 FROM
 columnas ,
@@ -41,8 +43,10 @@ columnistas.id_columnista = 22
 ORDER BY
 columnas.id_columna DESC
 LIMIT 5');?>  
-           <?php foreach($query_->result() as $carlos) { ?>
-			  <li><a href="#"><?php echo $carlos->titulo; ?> </a></li>
+           <?php foreach($query_->result() as $carlos) { 
+               $titulo=str_replace("'","",$carlos->titulo);
+               ?>
+          <li><a href="<?php echo base_url();?>index.php/columnista_controller/columnista/<?php echo $titulo;?>/<?php echo $carlos->id_columna;?>"><?php echo $carlos->titulo; ?> </a></li>
               <?php } ?>
   
   </div>

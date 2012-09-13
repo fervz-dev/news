@@ -6,4 +6,4 @@
   js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-like-box" data-href="https://www.facebook.com/Weetags" data-width="296" data-height="435" data-show-faces="true" data-stream="false" data-header="true"></div>
+<div class="fb-like-box" data-href="https://www.facebook.com/contraparteinformativa" data-width="292" data-show-faces="true" data-stream="true" data-header="true"></div>

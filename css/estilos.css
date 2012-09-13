@@ -12,16 +12,20 @@ span.clear { clear: both; display: block; font-size: 0; height: 1px; line-height
 .nobold {font-weight:normal; }
 
 
-.azul12 { font-size:12px; color:#008fc5; }
 .azul11 { font-size:11px; color:#008fc5; }
+.azul12 { font-size:12px; color:#008fc5; }
+.azul16 { font-size:12px; color:#008fc5; }
 .negro11 { font-size:11px; color:#000000; }
 .negro13 { font-size:13px; color:#000000; }
 .negro16 { font-size:16px; color:#000000; }
 .negro18 { font-size:18px; color:#000000; }
+.negro20 { font-size:18px; color:#000000; }
+.blanco11 { font-size:11px; color:#ffffff; }
 .blanco12 { font-size:12px; color:#ffffff; }
 .blanco14 { font-size:14px; color:#ffffff; }
+.blanco15 { font-size:15px; color:#ffffff; }
 .blanco18 { font-size:18px; color:#ffffff; }
-
+.gris14 { font-size:14px; color:#555555; }
 
 html { background: url(../ima/layout/body.jpg) center top no-repeat #eceded; }
 
@@ -64,7 +68,7 @@ body { background:url(../ima/layout/halo.png) left top no-repeat;  padding-top:2
 .columnhome { float:left; width:326px; margin-right:10px; margin-bottom:10ppx; }
 .border { border:1px solid #cfcfcf;}
 
-.titulosfoto {min-height:50px; max-height: 150px;  position:absolute; width:324px; background:url(../ima/layout/azul90.png); margin-top:-50px; margin-bottom:0px; margin-left:0px; }
+.titulosfoto { position:absolute; width:324px; background:url(../ima/layout/azul90.png); margin-top:-53px; margin-bottom:0px; margin-left:0px; }
 .titulosfoto.verde{ background:url(../ima/layout/verde90.png);}
 .titulosfoto span { padding:5px; display:block; }
 
@@ -80,7 +84,7 @@ body { background:url(../ima/layout/halo.png) left top no-repeat;  padding-top:2
 
 .columnistas-tab { clear:both; margin:0px; display:inline-block; border-bottom:1px solid #cdcaca; overflow:hidden; }
 .columnistas-tab li { float:left; list-style-type:none; }
-.columnistas-tab li a { font-weight:bold; font-size:16px; padding:4px 0; background:url(../ima/layout/bg-tab.png) left top repeat-x #f0eeee; border:1px solid #cdcaca; display:block; border-width:1px 1px 0 1px; }
+.columnistas-tab li a { font-weight:bold; font-size:16px; padding:4px 4px; background:url(../ima/layout/bg-tab.png) left top repeat-x #f0eeee; border:1px solid #cdcaca; display:block; border-width:1px 1px 0 1px; }
 .columnistas-tab li:last-child a { border-left:0px; }
 .columnistas-tab li a.active { background-image:none; background-color:#008fc5; color:#fff; }
 
@@ -94,6 +98,11 @@ body { background:url(../ima/layout/halo.png) left top no-repeat;  padding-top:2
 
 
 .item-youtube { width:300px; float:right; margin-bottom:15px; border-bottom:1px dashed #80b9d4; padding-bottom:15px; }
+.item-youtube.listado { width:284px; float:left; margin:15px; border:0px; border-left:3px solid #0060b3; padding-bottom:0px; padding-left:5px; }
+
+.item-columna.listado { width:290px; float:left; margin:15px; padding-bottom:15px; }
+.item-columna img { margin-right:10px; float:left; padding:4px; background:#fff; border:1px solid #ccc; }
+.item-columna .texto { float:right; width:160px; }
 
 .item-youtube:last-child { border-bottom:0px solid #fff; }
 
@@ -117,3 +126,23 @@ body { background:url(../ima/layout/halo.png) left top no-repeat;  padding-top:2
 .redesfooter span { float:left; margin-right:15px; }
 
 .ids { position:absolute; left:940px; top:105px; }
+
+.listado-noticia {width: 300px;  float:left; margin-right:0; margin-bottom:10px; text-align: justify; }
+.listado-noticia .imacrop { width:300px; }
+.listado-noticia .titulosfoto { width:300px; margin-top:-47px; }
+
+
+.paginador { border-top: 1px dashed #80b9d4; clear: both; float: left; margin: 0; text-align: right; width: 96%; margin-right:20px; }
+.paginador ul { margin: 0.75em 0; padding: 0 0 0 20px; }
+.paginador .pager li { background-image: none; display: inline; font-size: 11px; list-style-type: none; margin-left: 0; padding: 4px; }
+.paginador .pager li a { color: #008fc5; font-size: 11px; text-decoration: none; }
+.paginador .pager li a:hover { text-decoration: underline; }
+.pag-actual { color: #000; font-weight: bold; text-decoration: none; }
+.pag-siguiente * { color: #000 !important; text-decoration: none; }
+.ver-todas a { font-size: 11px; font-weight: bold; margin-left: 20px; }
+
+.columna { width:295px; float:left; margin:10px 20px 10px 0;}
+.piefoto { padding:5px 10px; background:#0070c0; color:#fff; font-size:11px; }
+
+.tool { margin:20px 0; }
+.tool img { vertical-align:middle; }

@@ -4,6 +4,9 @@
 
 <?php
 /**************************PALABRAS RECORTADAS DE NACIONALES****************************************************/
+$nacional0=$nacional[0]['titulo'];
+$nacional0=  word_limiter($nacional0, 8);
+
 $nacional1 = $nacional[1]['sintesis'];
 $nacional1= word_limiter($nacional1, 12);
 
@@ -16,8 +19,31 @@ $nacional3= word_limiter($nacional3, 12);
 $nacional4 = $nacional[4]['sintesis'];
 $nacional4= word_limiter($nacional4, 12);
 
+/**********************************************QUITAR COMILLAS NACIONALES*************************************************/
+$tit_nac0=str_replace("'","",$nacional[0]['titulo']);
+$tit_nac1=str_replace("'","",$nacional[1]['titulo']);
+$tit_nac2=str_replace("'","",$nacional[2]['titulo']);
+$tit_nac3=str_replace("'","",$nacional[3]['titulo']);
+$tit_nac4=str_replace("'","",$nacional[4]['titulo']);
+/**********************************************QUITAR COMILLAS CIUDAD*************************************************/
+$tit_cd0=  str_replace("'","",$ciudad[0]['titulo']);
+$tit_cd1=str_replace("'","",$ciudad[1]['titulo']);
+$tit_cd2=str_replace("'","",$ciudad[2]['titulo']);
+$tit_cd3=str_replace("'","",$ciudad[3]['titulo']);
+
+/**********************************************QUITAR COMILLAS ESPECTACULOS*************************************************/
+$tit_esp0=str_replace("'","",$espectaculos[0]['titulo']);
+$tit_esp1=str_replace("'","",$espectaculos[1]['titulo']);
+$tit_esp2=str_replace("'","",$espectaculos[2]['titulo']);
+$tit_esp3=str_replace("'","",$espectaculos[3]['titulo']);
+$tit_esp4=str_replace("'","",$espectaculos[4]['titulo']);
+
+
 
 /**************************PALABRAS RECORTADAS DE LOCALES(CIUDAD)*************************************************/
+$ciudad0=$ciudad[0]['titulo'];
+$ciudad0=  word_limiter($ciudad0, 8);
+
 $ciudad1 = $ciudad[1]['sintesis'];
 $ciudad1= word_limiter($ciudad1, 12);
 
@@ -26,9 +52,6 @@ $ciudad2= word_limiter($ciudad2, 12);
 
 $ciudad3 = $ciudad[3]['sintesis'];
 $ciudad3= word_limiter($nacional3, 12);
-
-$ciudad4 = $ciudad[4]['sintesis'];
-$ciudad4= word_limiter($ciudad4, 12);
  ?>
 
 <div id="main">
@@ -37,42 +60,51 @@ $ciudad4= word_limiter($ciudad4, 12);
 <h2><a class="negro16" href="#">NACIONALES</a></h2>
 <div class="content border">
 <div class="coin-title">
-<img src="../archivoFotografico/<?php echo $nacional[0]['idImagen'];?>" width="326" height="183" />
+<img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $nacional[0]['idImagen'];?>" width="326" height="183" />
 </div>
+    <h3 class="titulosfoto" >
+        <span>
+            <a class="blanco18"  href="<?php echo base_url();?>index.php/internas/nacional/<?php echo $tit_nac0;?>/<?php echo $nacional[0]['idNoticia']?>"><?php echo $nacional0;?></a>
+        </span>
+    </h3>
 
-
-    <h3 class="titulosfoto" ><span><a class="blanco18"  href="#"><?php echo $nacional[0]['titulo'];?></a></span></h3>
-<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[1]['titulo'];?></a><br />
-
-
+    <h2 class="bg-item"><a class="negro18" href="<?php echo base_url();?>index.php/internas/nacional/<?php echo $tit_nac1;?>/<?php echo $nacional[1]['idNoticia'];?>"><?php echo $nacional[1]['titulo'];?></a><br />
     <span><?php echo $nacional1;?></span></h2>
 
-<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[2]['titulo'];?></a><br/>
+    <h2 class="bg-item"><a class="negro18" href="<?php echo base_url();?>index.php/internas/nacional/<?php echo $tit_nac2;?>/<?php echo $nacional[2]['idNoticia'];?>"><?php echo $nacional[2]['titulo'];?></a><br/>
 <span><?php echo $nacional2;?></span></h2>
 
-<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[3]['titulo'];?></a><br/>
+<h2 class="bg-item"><a class="negro18" href="<?php echo base_url();?>index.php/internas/nacional/<?php echo $tit_nac3;?>/<?php echo $nacional[3]['idNoticia'];?>"><?php echo $nacional[3]['titulo'];?></a><br/>
 <span><?php echo $nacional3;?></span></h2>
 
-<h2 class="bg-item"><a class="negro18" href="#"><?php echo $nacional[4]['titulo'];?></a><br/>
+<h2 class="bg-item"><a class="negro18" href="<?php echo base_url();?>index.php/internas/nacional/<?php echo $tit_nac4;?>/<?php echo $nacional[4]['idNoticia'];?>"><?php echo $nacional[4]['titulo'];?></a><br/>
 <span><?php echo $nacional4;?></span></h2>
 </div> <!--/content -->
+
+
 </div> <!--/columnhome -->
 
 <div class="columnhome">
-<h2><a class="negro16" href="#">LOCALES</a></h2>
+    <h2><a class="negro16" href="<?php echo base_url();?>index.php/paginacion_controller/noticia/">LOCALES</a></h2>
 <div class="content border">
-  <div class="imacrop" style="height:217px;"> <img src="../archivoFotografico/<?php echo $ciudad[0]['idImagen'];?>" alt="" width="326" height="217" />
+  <div class="coin-title" style="height:215px;"> <img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $ciudad[0]['idImagen'];?>" alt="" width="326" height="217" />
   </div>
-    <h3 class="titulosfoto"><span><a  class="blanco18" href="#"><?php echo $ciudad[0]['titulo'];?></a></span></h3><br/>
+     <h3 class="titulosfoto">
+        <span>
+            <a class="blanco18"  href="<?php echo base_url();?>index.php/internas/ciudad/<?php echo $tit_cd0;?>/<?php echo $ciudad[0]['idNoticia']?>">
+                <?php echo $ciudad0;?>
+            </a>
+        </span>
+    </h3>
 
-    <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[1]['titulo'];?></a><br/>
+  <h2 class="bg-item"><a class="negro18" href="<?php echo base_url();?>index.php/internas/ciudad/<?php echo $tit_cd1;?>/<?php echo $ciudad[1]['idNoticia'];?>"><?php echo $ciudad[1]['titulo'];?></a><br/>
   <span><?php echo $ciudad1;?></span></h2>
 
 
-  <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[2]['titulo'];?></a><br/>
+  <h2 class="bg-item"><a class="negro18" href="<?php echo base_url();?>index.php/internas/ciudad/<?php echo $tit_cd2;?>/<?php echo $ciudad[2]['idNoticia'];?>"><?php echo $ciudad[2]['titulo'];?></a><br/>
   <span><?php echo $ciudad2;?></span></h2>
 
-  <h2 class="bg-item"><a class="negro18" href="#"><?php echo $ciudad[3]['titulo'];?></a><br/>
+  <h2 class="bg-item"><a class="negro18" href="<?php echo base_url();?>index.php/internas/ciudad/<?php echo $tit_cd3;?>/<?php echo $ciudad[3]['idNoticia'];?>"><?php echo $ciudad[3]['titulo'];?></a><br/>
   <span><?php echo $ciudad3;?></span></h2>
 </div>
 </div> <!--/columnhome -->
@@ -85,33 +117,33 @@ $ciudad4= word_limiter($ciudad4, 12);
 <div id="slides">
         <div class="slides_container">
           <div class="slide">
-              <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[0]['idImagen'];?>"  width="570" height="270" alt="Slide 1"></a>
+              <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp0;?>/<?php echo $espectaculos[0]['idNoticia'];?>" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[0]['idImagen'];?>"  width="294" height="168" alt="Slide 1"></a>
             <div class="caption" style="bottom:0">
-              <p><?php echo $espectaculos[0]['titulo'];?></p>
+              <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp0;?>/<?php echo $espectaculos[0]['idNoticia'];?>"target="_blank"><p><?php echo $espectaculos[0]['titulo'];?></p></a>
             </div>
           </div>
           <div class="slide">
-              <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[1]['idImagen'];?>"  width="300" height="240" alt="Slide 2"></a>
+              <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp1;?>/<?php echo $espectaculos[1]['idNoticia'];?>" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[1]['idImagen'];?>"  width="294" height="168" alt="Slide 2"></a>
             <div class="caption">
-              <p><?php echo $espectaculos[1]['titulo'];?></p>
+              <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp1;?>/<?php echo $espectaculos[1]['idNoticia'];?>" target="_blank"><p><?php echo $espectaculos[1]['titulo'];?></p></a>
             </div>
           </div>
           <div class="slide">
-            <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[2]['idImagen'];?>"  width="300" height="240" alt="Slide 3"></a>
+            <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp2;?>/<?php echo $espectaculos[2]['idNoticia'];?>" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[2]['idImagen'];?>"  width="294" height="168" alt="Slide 3"></a>
             <div class="caption">
-              <p><?php echo $espectaculos[2]['titulo'];?></p>
+              <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp2;?>/<?php echo $espectaculos[2]['idNoticia'];?>" target="_blank"><p><?php echo $espectaculos[2]['titulo'];?></p></a>
             </div>
           </div>
           <div class="slide">
-            <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[3]['idImagen'];?>" width="300" height="240" alt="Slide 3"></a>
+            <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp3;?>/<?php echo $espectaculos[3]['idNoticia'];?>" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[3]['idImagen'];?>" width="294" height="168" alt="Slide 3"></a>
               <div class="caption">
-                <p><?php echo $espectaculos[3]['titulo'];?></p>
+                <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp3;?>/<?php echo $espectaculos[3]['idNoticia'];?>" target="_blank"><p><?php echo $espectaculos[3]['titulo'];?></p></a>
             </div>
           </div>
           <div class="slide">
-            <a href="#" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[4]['idImagen'];?>" width="300" height="240" alt="Slide 5"></a>
+            <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp4;?>/<?php echo $espectaculos[4]['idNoticia'];?>" title="" target="_blank"><img src="http://www.contraparteinformativa.com/archivoFotografico/<?php echo $espectaculos[4]['idImagen'];?>" width="294" height="168" alt="Slide 5"></a>
             <div class="caption">
-              <p><?php echo $espectaculos[4]['titulo'];?></p>
+              <a href="<?php echo base_url();?>index.php/internas/espectaculo/<?php echo $tit_esp4;?>/<?php echo $espectaculos[4]['idNoticia'];?>" target="_blank"><p><?php echo $espectaculos[4]['titulo'];?></p></a>
             </div>
           </div>
         </div>
@@ -122,7 +154,6 @@ $ciudad4= word_limiter($ciudad4, 12);
     </div>
   </div>
 
-
 <!-- /Espectaculos -->
 
 <?php echo $this->load->view('columnistas');?>
@@ -132,44 +163,24 @@ $ciudad4= word_limiter($ciudad4, 12);
 
 <span class="clear" style="margin:20px 0;"></span>
 
-<div class="columnhome">
-  <img src="ima/banners/chicos/banner2.jpg" width="329" height="95" />
-</div><!--/columnhome -->
+<!----------------------------------BANNERS CENTRALES---------------------------------------------------------------------------->
+<?php $this->load->view('banner_central');?>
+<!----------------------------------/BANNERS CENTRALES---------------------------------------------------------------------------->
 
-<div class="columnhome">
-  <img src="ima/banners/chicos/banner2.jpg" width="329" height="95" />
-</div><!--/columnhome -->
-
-<div class="columnhome" style="width:296px; margin-right:0px;">
-  <img src="ima/banners/chicos/banner1.png" width="312" height="116" />
-</div> <!--/columnhome -->
 
 <span class="clear"></span>
-
+<!-----------------------------------------------VIDEOS------------------------------------>
 
 <?php echo $this->load->view('videos');?>
 
+<!---------------------------------------TERMINA VIDEOS------------------------------------->
 
 <?php
 
 $db4=$this->load->database("noticias",true);
-$query = $db4->query("
+$qvideo = $db4->query("
     SELECT
-noticias.idNoticia,
-noticias.fecha,
-noticias.hora,
-noticias.titulo,
-noticias.idImagen,
-noticias.idTipoDocto,
-noticias.contenido,
-noticias.sintesis,
-noticias.idPrioridadInterna,
-noticias.alineacion,
-noticias.titular,
-noticias.id_usuario,
-noticias.id_tipoUsuario,
-noticias.keywords,
-noticias.description,
+noticias.*,
 
 opinionNoticia.id_mensaje,
 opinionNoticia.id_noticia, COUNT(opinionNoticia.id_noticia),
@@ -178,10 +189,12 @@ opinionNoticia.comentarios,
 
 rubros.idRubro,
 rubros.etiqueta
+
 FROM
 noticias
 LEFT JOIN opinionNoticia ON noticias.idNoticia = opinionNoticia.id_noticia
 JOIN rubros ON noticias.idTipoDocto = rubros.idRubro
+
 WHERE
 rubros.etiqueta NOT LIKE 'Ciudad' AND
 noticias.idTipoDocto = rubros.idRubro AND
@@ -193,80 +206,96 @@ GROUP BY
 noticias.idNoticia DESC
 ORDER BY
 noticias.idNoticia DESC
-LIMIT 8");
+LIMIT 9
+");
 
 
-$query= $query->result_array();
-
-
-
+$qvideo= $qvideo->result_array();
 
         ?>
     <div class="columnhome" style="width:296px; margin-right:0px;">
   <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
-    <li><strong class="negro12"><a href="#"><?php echo $query[0]['titulo']; ?> </a></strong><br />
-      <strong class="azul12"><?php echo $query[0]['fecha'];?></strong> · <strong><?php echo $query[0]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+    <li><strong class="negro12"><a href="<?php echo base_url();?>index.php/internas/otras/<?php echo $qvideo[0]['titulo']?>/<?php echo $qvideo[0]['idNoticia']?>/<?php echo $qvideo[0]['idRubro'];?>"><?php echo $qvideo[0]['titulo']; ?> </a></strong><br />
+      <strong class="azul12"><?php echo $qvideo[0]['fecha'];?></strong> · <strong><?php echo $qvideo[0]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span>
-     <a class="azul11" href="#"><?php echo $query[0]['etiqueta'];?></a> <span class="azul11">/</span>
-                    <a class="azul11"><?php $id= $query[0]['idRubro'];
-                    $bus = $db4->query("SELECT
+     <a class="azul11"><?php echo $qvideo[0]['etiqueta'];?></a> <span class="azul11">/</span>
+
+     <?php $id= $qvideo[0]['idRubro'];
+                    $busv = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
-               noticias.idTipoDocto
+               noticias.idTipoDocto,
+               rubros.idRubro
                FROM
-               noticias
+               noticias, rubros
                WHERE
-               noticias.idTipoDocto =" .$id."
+               noticias.idTipoDocto =" .$id." and
+               noticias.idTipoDocto = rubros.idRubro
                ORDER BY
                noticias.idNoticia DESC");
-                    $bus=$bus->result_array();
+                    $busv=$busv->result_array();
 
-                    echo $bus[1]['titulo'];
-                    ?></a>
-                    <span class="azul11">/</span> <a class="azul11"><?php echo $bus[2]['titulo'];?></a></li>
+                    ?>
+                    <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $busv[1]['titulo'];?>/<?php echo $busv[1]['idNoticia'];?>/<?php echo $busv[1]['idRubro'];?>"><?php echo $busv[1]['titulo'];?></a>
+     <span class="azul11">/</span> <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $busv[2]['titulo'];?>/<?php echo $busv[2]['idNoticia'];?>/<?php echo $busv[2]['idRubro'];?>"><?php echo $busv[2]['titulo'];?></a></li>
 
-    <li><strong class="negro12"><a href="#"><?php echo $query[1]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[1]['fecha']; ?></strong> · <strong><?php echo $query[1]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+    <li><strong class="negro12"><a href="<?php echo base_url();?>index.php/internas/otras/<?php echo $qvideo[1]['titulo']?>/<?php echo $qvideo[1]['idNoticia']?>/<?php echo $qvideo[1]['idRubro'];?>"><?php echo $qvideo[1]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?php echo $qvideo[1]['fecha']; ?></strong> · <strong><?php echo $qvideo[1]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
      <span class="negro11">Temas relacionados:</span>
-            <a class="azul11" href="#"><?php echo $query[1]['etiqueta'];?></a> <span class="azul11">/</span>
-            <a class="azul11" href="#"><?php $id= $query[1]['idRubro'];
-                    $bus = $db4->query("SELECT
+            <a class="azul11" href="#"><?php echo $qvideo[1]['etiqueta'];?></a> <span class="azul11">/</span>
+            <?php $id= $qvideo[1]['idRubro'];
+                    $busv = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
-               noticias.idTipoDocto
+               noticias.idTipoDocto,
+               rubros.idRubro
                FROM
-               noticias
+               noticias, rubros
                WHERE
-               noticias.idTipoDocto =" .$id."
+               noticias.idTipoDocto =" .$id." and
+               noticias.idTipoDocto = rubros.idRubro
                ORDER BY
                noticias.idNoticia DESC");
-                    $bus=$bus->result_array();
+                    $busv=$busv->result_array();
 
-                    echo $bus[1]['titulo'];
-                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
+                    ?>
+            <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $busv[1]['titulo'];?>/<?php echo $busv[1]['idNoticia'];?>/<?php echo $busv[1]['idRubro'];?>"><?php echo $busv[1]['titulo'];?></a>
+            <span class="azul11">/</span> <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $busv[2]['titulo'];?>/<?php echo $busv[2]['idNoticia'];?>/<?php echo $busv[2]['idRubro'];?>"><?php echo $busv[2]['titulo'];?></a></li>
 
-    <li><strong class="negro12"><a href="#"><?php echo $query[2]['titulo']?></a></strong><br />
-      <strong class="azul12"><?php echo $query[2]['fecha'];?></strong> · <strong><?php echo $query[2]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[2]['etiqueta'];?></a> <span class="azul11">/</span>
-     <a class="azul11" href="#"><?php $id= $query[2]['idRubro'];
-                    $bus = $db4->query("SELECT
+    <li><strong class="negro12"><a href="<?php echo base_url();?>index.php/internas/otras/<?php echo $qvideo[2]['titulo']?>/<?php echo $qvideo[2]['idNoticia']?>/<?php echo $qvideo[2]['idRubro'];?>"><?php echo $qvideo[2]['titulo']?></a></strong><br />
+      <strong class="azul12"><?php echo $qvideo[2]['fecha'];?></strong> · <strong><?php echo $qvideo[2]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $qvideo[2]['etiqueta'];?></a> <span class="azul11">/</span>
+
+      <?php $id= $qvideo[2]['idRubro'];
+                    $busv = $db4->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
-               noticias.idTipoDocto
+               noticias.idTipoDocto,
+               rubros.idRubro
                FROM
-               noticias
+               noticias, rubros
                WHERE
-               noticias.idTipoDocto =" .$id."
+               noticias.idTipoDocto =" .$id." and
+               noticias.idTipoDocto = rubros.idRubro
                ORDER BY
                noticias.idNoticia DESC");
-                    $bus=$bus->result_array();
+                    $busv=$busv->result_array();
 
-                    echo $bus[1]['titulo'];
-                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
+
+                    ?>
+     <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $busv[1]['titulo'];?>/<?php echo $busv[1]['idNoticia'];?>/<?php echo $busv[1]['idRubro'];?>"><?php echo $busv[1]['titulo'];?>
+
+        </a> <span class="azul11">/</span> <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $busv[2]['titulo'];?>/<?php echo $busv[2]['idNoticia'];?>/<?php echo $busv[2]['idRubro'];?>"><?php echo $busv[2]['titulo'];?></a></li>
 
   </ul>
-    <p><img src="ima/banners/chicos/banner2.jpg" alt="" width="296" height="88" /></p>
+  <!----------------------------------BANNERS DERECHA VIDEOS---------------------------------------------------------------------------->
+
+    <p><?php $this->load->view('derecha_videos');?></p>
+
+
+<!----------------------------------BANNERS DERECHA VIDEOS---------------------------------------------------------------------------->
+
 </div><!--/columnhome -->
 
 <span class="clear" style="margin:20px 0"></span>
@@ -278,118 +307,151 @@ $query= $query->result_array();
 <div class="columnhome">
   <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
-    <li><strong class="negro12"><a href="#"><?php echo $query[3]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[3]['fecha'];?></strong> · <strong><?php echo $query[3]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[3]['etiqueta'];?></a> <span class="azul11">/</span>
-     <a class="azul11" href="#"><?php $id= $query[3]['idRubro'];
-                    $bus = $db4->query("SELECT
-               noticias.idNoticia,
+    <li><strong class="negro12"><a href="<?php echo base_url();?>index.php/internas/otras/<?php echo $qvideo[3]['titulo']?>/<?php echo $qvideo[3]['idNoticia']?>/<?php echo $qvideo[3]['idRubro'];?>"><?php echo $qvideo[3]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?php echo $qvideo[3]['fecha'];?></strong> · <strong><?php echo $qvideo[3]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $qvideo[3]['etiqueta'];?></a> <span class="azul11">/</span>
+     <?php $id= $qvideo[3]['idRubro'];
+
+     $db5=$this->load->database("noticias",true);
+     $bus = $db5->query("SELECT
+              noticias.idNoticia,
                noticias.titulo,
-               noticias.idTipoDocto
+               noticias.idTipoDocto,
+               rubros.idRubro
                FROM
-               noticias
+               noticias, rubros
                WHERE
-               noticias.idTipoDocto =" .$id."
+               noticias.idTipoDocto =" .$id." and
+               noticias.idTipoDocto = rubros.idRubro
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
 
-                    echo $bus[1]['titulo'];
-                    ?></a>
-     <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
+                    ?>
 
-    <li><strong class="negro12"><a href="#"><?php echo $query[4]['titulo']?></a></strong><br />
-      <strong class="azul12"><?php echo $query[4]['fecha']?></strong> · <strong><?php echo $query[4]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[4]['etiqueta'];?></a> <span class="azul11">/</span>
-     <a class="azul11" href="#"><?php $id= $query[4]['idRubro'];
-                    $bus = $db4->query("SELECT
+     <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[1]['titulo'];?>/<?php echo $bus[1]['idNoticia'];?>/<?php echo $bus[1]['idRubro'];?>"> <?php echo $bus[1]['titulo'];?></a>
+     <span class="azul11">/</span> <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[2]['titulo'];?>/<?php echo $bus[2]['idNoticia'];?>/<?php echo $bus[2]['idRubro'];?>"><?php echo $bus[2]['titulo'];?></a></li>
+
+    <li><strong class="negro12"><a href="<?php echo base_url();?>index.php/internas/otras/<?php echo $qvideo[4]['titulo']?>/<?php echo $qvideo[4]['idNoticia']?>/<?php echo $qvideo[4]['idRubro'];?>"><?php echo $qvideo[4]['titulo']?></a></strong><br />
+      <strong class="azul12"><?php echo $qvideo[4]['fecha']?></strong> · <strong><?php echo $qvideo[4]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $qvideo[4]['etiqueta'];?></a> <span class="azul11">/</span>
+
+        <?php $id= $qvideo[4]['idRubro'];
+                    $bus = $db5->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
-               noticias.idTipoDocto
+               noticias.idTipoDocto,
+               rubros.idRubro
                FROM
-               noticias
+               noticias, rubros
                WHERE
-               noticias.idTipoDocto =" .$id."
+               noticias.idTipoDocto =" .$id." and
+               noticias.idTipoDocto = rubros.idRubro
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
 
-                    echo $bus[1]['titulo'];
-                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
 
-    <li><strong class="negro12"><a href="#"><?php echo $query[5]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?php echo $query[5]['fecha'];?></strong> · <strong><?php echo $query[5]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[5]['etiqueta'];?></a> <span class="azul11">/</span>
-     <a class="azul11" href="#"><?php $id= $query[5]['idRubro'];
+                    ?>
+     <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[1]['titulo'];?>/<?php echo $bus[1]['idNoticia'];?>/<?php echo $bus[1]['idRubro'];?>"><?php echo $bus[1]['titulo'];?>
+      </a> <span class="azul11">/</span> <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[2]['titulo'];?>/<?php echo $bus[2]['idNoticia'];?>/<?php echo $bus[2]['idRubro'];?>"><?php echo $bus[2]['titulo'];?></a></li>
+
+    <li><strong class="negro12"><a href="<?php echo base_url();?>index.php/internas/otras/<?php echo $qvideo[5]['titulo']?>/<?php echo $qvideo[5]['idNoticia']?>/<?php echo $qvideo[5]['idRubro'];?>"><?php echo $qvideo[5]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?php echo $qvideo[5]['fecha'];?></strong> · <strong><?php echo $qvideo[5]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $qvideo[5]['etiqueta'];?></a> <span class="azul11">/</span>
+
+     <?php $id= $qvideo[5]['idRubro'];
                     $bus = $db4->query("SELECT
-               noticias.idNoticia,
+              noticias.idNoticia,
                noticias.titulo,
-               noticias.idTipoDocto
+               noticias.idTipoDocto,
+               rubros.idRubro
                FROM
-               noticias
+               noticias, rubros
                WHERE
-               noticias.idTipoDocto =" .$id."
+               noticias.idTipoDocto =" .$id." and
+               noticias.idTipoDocto = rubros.idRubro
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
 
-                    echo $bus[1]['titulo'];
-                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
+                    ?>
+     <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[1]['titulo'];?>/<?php echo $bus[1]['idNoticia'];?>/<?php echo $bus[1]['idRubro'];?>"><?php echo $bus[1]['titulo'];?></a>
+     <span class="azul11">/</span>
+     <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[2]['titulo'];?>/<?php echo $bus[2]['idNoticia'];?>/<?php echo $bus[2]['idRubro'];?>"><?php echo $bus[2]['titulo'];?></a></li>
   </ul>
+<!------------------------------------------BANNER ABAJO CENTRO----------------------------------------------------------------------->
+    <p><?php $this->load->view('abajo_centro');?></p>
 
-    <p><img src="ima/banners/chicos/banner2.jpg" width="329" height="95" /></p>
+<!------------------------------------------/BANNER ABAJO CENTRO----------------------------------------------------------------------->
+
 <h2 class="titulo"><span>Otras noticias</span></h2>
     <ul class="item-columna">
-    <li><strong class="negro12"><a href="#"><? echo $query[6]['titulo'];?></a></strong><br />
-      <strong class="azul12"><? echo $query[6]['fecha'];?></strong> · <strong><?php echo $query[6]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[6]['etiqueta'];?></a> <span class="azul11">/</span>
-     <a class="azul11" href="#"><?php $id= $query[6]['idRubro'];
-                    $bus = $db4->query("SELECT
+     <li><strong class="negro12"><a href="<?php echo base_url();?>index.php/internas/otras/<?php echo $qvideo[6]['titulo']?>/<?php echo $qvideo[6]['idNoticia']?>/<?php echo $qvideo[6]['idRubro'];?>"><?php echo $qvideo[6]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?php echo $qvideo[6]['fecha'];?></strong> · <strong><?php echo $qvideo[6]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $qvideo[6]['etiqueta'];?></a> <span class="azul11">/</span>
+
+      <?php $id= $qvideo[6]['idRubro'];
+     $db6=$this->load->database("noticias",true);
+                    $bus = $db6->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
-               noticias.idTipoDocto
+               noticias.idTipoDocto,
+               rubros.idRubro
                FROM
-               noticias
+               noticias, rubros
                WHERE
-               noticias.idTipoDocto =" .$id."
+               noticias.idTipoDocto =" .$id." and
+               noticias.idTipoDocto = rubros.idRubro
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
 
-                    echo $bus[1]['titulo'];
-                    ?></a> <span class="azul11">  /  </span>  <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
+                    ?>
+     <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[1]['titulo'];?>/<?php echo $bus[1]['idNoticia'];?>/<?php echo $bus[1]['idRubro'];?>""><?php echo $bus[1]['titulo'];?>
+        </a> <span class="azul11">/</span> <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[2]['titulo'];?>/<?php echo $bus[2]['idNoticia'];?>/<?php echo $bus[2]['idRubro'];?>""><?php echo $bus[2]['titulo'];?></a></li>
 
-    <li><strong class="negro12"><a href="#"><?echo $query[7]['titulo'];?></a></strong><br />
-      <strong class="azul12"><?echo $query[7]['fecha'];?></strong> · <strong><?php echo $query[7]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
-     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $query[7]['etiqueta'];?></a> <span class="azul11">/</span>
-     <a class="azul11" href="#"><?php $id= $query[7]['idRubro'];
-                    $bus = $db4->query("SELECT
+
+
+     <li><strong class="negro12"><a href="<?php echo base_url();?>index.php/internas/otras/<?php echo $qvideo[7]['titulo']?>/<?php echo $qvideo[7]['idNoticia']?>/<?php echo $qvideo[7]['idRubro'];?>"><?php echo $qvideo[7]['titulo'];?></a></strong><br />
+      <strong class="azul12"><?php echo $qvideo[7]['fecha'];?></strong> · <strong><?php echo $qvideo[7]['COUNT(opinionNoticia.id_noticia)'];?>  Comentarios</strong><br />
+     <span class="negro11">Temas relacionados:</span> <a class="azul11" href="#"><?php echo $qvideo[7]['etiqueta'];?></a> <span class="azul11">/</span>
+
+     <?php $id= $qvideo[7]['idRubro'];
+                    $bus = $db6->query("SELECT
                noticias.idNoticia,
                noticias.titulo,
-               noticias.idTipoDocto
+               noticias.idTipoDocto,
+               rubros.idRubro
                FROM
-               noticias
+               noticias, rubros
                WHERE
-               noticias.idTipoDocto =" .$id."
+               noticias.idTipoDocto =" .$id." and
+               noticias.idTipoDocto = rubros.idRubro
                ORDER BY
                noticias.idNoticia DESC");
                     $bus=$bus->result_array();
 
-                    echo $bus[1]['titulo'];
-                    ?></a> <span class="azul11">/</span> <a class="azul11" href="#"><?php echo $bus[2]['titulo'];?></a></li>
-  </ul>
+
+                    ?>
+     <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[1]['titulo'];?>/<?php echo $bus[1]['idNoticia'];?>/<?php echo $bus[1]['idRubro'];?>"">
+         <?php echo $bus[1]['titulo'];?></a>
+     <span class="azul11">/</span> <a class="azul11" href="<?php echo base_url();?>index.php/internas/otras/<?php echo $bus[2]['titulo'];?>/<?php echo $bus[2]['idNoticia'];?>/<?php echo $bus[2]['idRubro'];?>"><?php echo $bus[2]['titulo'];?></a></li>
+    </ul>
 
 </div> <!--/columnhome -->
 
-<div class="columnhome" style="width:296px; margin:0px;" width="296" height="435">
-  <?php
-    $this->load->view('facebook');
-  ?>
-    <p><img src="ima/banners/chicos/banner2.jpg" width="296" height="95" /></p>
+<div class="columnhome" style="width:296px; margin:0px;" width="296" height="435"">
+	<?php $this->load->view('facebook');?>
+
+ <!-------------------------------------BANNER ABAJO DERECHA------------------------------------------------------>
+
+ <p><?php $this->load->view('abajo_derecha');?></p>
+
+ <!-------------------------------------/BANNER ABAJO DERECHA------------------------------------------------------>
 
 </div>
 <!--/columnhome -->
-
 <span class="clear"></span>
 </div> <!--/main -->
 

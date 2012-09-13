@@ -1,0 +1,17 @@
+[04-Sep-2012 13:06:25] PHP Fatal error:  Call to a member function result_array() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/nacional.php on line 10
+[04-Sep-2012 13:06:27] PHP Fatal error:  Call to a member function result_array() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/nacional.php on line 10
+[04-Sep-2012 13:06:59] PHP Fatal error:  Call to a member function result_array() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/nacional.php on line 10
+[06-Sep-2012 14:06:08] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:06:09] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:06:36] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:06:38] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:07:07] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:07:10] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:07:29] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:09:26] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:10:10] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:28:55] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:32:23] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[06-Sep-2012 14:33:59] PHP Fatal error:  Call to a member function query() on a non-object in /home/wwwcont/public_html/nuevo_2012/application/views/otras.php on line 53
+[07-Sep-2012 14:58:33] PHP Fatal error:  Class 'Noticia_columnista' not found in /home/wwwcont/public_html/nuevo_2012/system/core/Loader.php on line 303
+[11-Sep-2012 15:06:24] PHP Fatal error:  Call to undefined method Noticia::comentarios() in /home/wwwcont/public_html/nuevo_2012/application/controllers/internas.php on line 26
